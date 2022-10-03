@@ -1,0 +1,5 @@
+superset_code,country,state,zip_from,zip_to,price,weight_from,weight_to,is_zip_range,zip_code
+1-day-delivery,IN,UP,201316,202000,15.5,10.0001,20,1,*
+1-day-delivery,IN,UP,201301,201315,6,1,10,1,*
+2-days-delivery,IN,UP,201000,300000,10.5,1,5,1,*
+1-day-delivery,US,NY,10001,20000,3.2,0.0001,50,1,*

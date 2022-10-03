@@ -1,0 +1,171 @@
+{
+    "html": [
+        "[block slug=\"promo-top\" id=\"IDKMB8OFDTNWR003\"][block slug=\"new-sellers\" id=\"IDKMB8OFDYDSOUW4\"][block slug=\"featured-products\" id=\"IDKMB8IE1A167UR0\"][block slug=\"community-links-slider\" id=\"IDKMB8JLW9N7XAF1\"][block slug=\"new-products\" id=\"IDKMB8KI9K2RQDF2\"][block slug=\"uscca-links\" id=\"IDKMB8OFE002TEO5\"][block slug=\"find-training\" id=\"IDKMB8OFE0DGUWD6\"]"
+    ],
+    "components": [
+        [
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "promo-top",
+                    "id": "IDKMB8OFDTNWR003"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "new-sellers",
+                    "id": "IDKMB8OFDYDSOUW4"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "featured-products",
+                    "id": "IDKMB8IE1A167UR0"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "community-links-slider",
+                    "id": "IDKMB8JLW9N7XAF1"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "new-products",
+                    "id": "IDKMB8KI9K2RQDF2"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "uscca-links",
+                    "id": "IDKMB8OFE002TEO5"
+                }
+            },
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "find-training",
+                    "id": "IDKMB8OFE0DGUWD6"
+                }
+            }
+        ]
+    ],
+    "css": "* { box-sizing: border-box; } body {margin: 0;}.new-sellers{background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat-x:initial;background-repeat-y:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgba(235, 235, 235, 0.4);}",
+    "style": [
+        {
+            "selectors": [
+                {
+                    "name": "new-sellers",
+                    "label": "new-sellers",
+                    "type": 1,
+                    "active": true,
+                    "private": false,
+                    "protected": false
+                }
+            ],
+            "style": {
+                "background-image": "initial",
+                "background-position-x": "initial",
+                "background-position-y": "initial",
+                "background-size": "initial",
+                "background-repeat-x": "initial",
+                "background-repeat-y": "initial",
+                "background-attachment": "initial",
+                "background-origin": "initial",
+                "background-clip": "initial",
+                "background-color": "rgba(235, 235, 235, 0.4)"
+            }
+        }
+    ],
+    "blocks": {
+        "en": {
+            "IDKMB8OFDTNWR003": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKMB8GIMKOGPZQ1"
+                    }
+                },
+                "blocks": [],
+                "html": "<div class=\"promo-top-banner IDKMB8GIMKOGPZQ1\">\n    <p data-raw-content=\"true\" class=\"h2 promo-top-banner__title\">\n        Start selling your products\n        <span class=\"text-primary\">today!<\/span><\/p>\n    <p data-raw-content=\"true\" class=\"font-paragraph-big-bold mb-0\">The Marketplace is open for business<\/p>\n    <p data-raw-content=\"true\" class=\"font-paragraph-bold mb-4\">Zero listing fees - limited time only<\/p><a href=\"\/marketplace\/start-selling\" class=\"btn btn-xl btn-outline-primary IDKMB8GIMQHEU2W2\">Let's Go!<\/a>\n<\/div>",
+                "is_html": true
+            },
+            "IDKMB8OFDYDSOUW4": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKMB8GXA0XI8D14"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKMB8IE1A167UR0": {
+                "settings": {
+                    "attributes": {
+                        "products": 6,
+                        "title": "What's Hot",
+                        "style-identifier": "IDKMB8I1TDUZ2KL6"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKMB8JLW9N7XAF1": {
+                "settings": {
+                    "attributes": {
+                        "title": "Find People In the Community Near You",
+                        "style-identifier": "IDKMB8J3G3YBOWM8"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKMB8KI9K2RQDF2": {
+                "settings": {
+                    "attributes": {
+                        "products": 6,
+                        "title": "New Products",
+                        "style-identifier": "IDKMB8KL2C0C4Q511"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKMB8OFE002TEO5": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKMB8L5DZ24UER13"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKMB8OFE0DGUWD6": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKMB8OD9CD3B3T15"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            }
+        }
+    }
+}

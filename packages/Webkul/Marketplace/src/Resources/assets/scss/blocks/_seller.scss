@@ -1,0 +1,126 @@
+// seller section
+.seller-section {
+
+  // promo
+  &__promo {
+    height: 261px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  // general information about the seller
+  &__head {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 7px;
+
+    .preferred {
+      margin-left: 12px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-inner {
+      flex: 1 100%;
+
+      @media only screen and (min-width: 768px) {
+        flex: 0 1 auto;
+      }
+    }
+
+    .logo {
+      margin-top: -53px;
+      margin-right: 37px;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba($color-black, 0.25);
+      -moz-box-shadow: 0px 0px 5px 0px rgba($color-black, 0.25);
+      box-shadow: 0px 0px 5px 0px rgba($color-black, 0.25);
+      width: 200px;
+      height: 200px;
+      display: flex;
+      background: $color-gray-lighter;
+      align-items: center;
+
+      @media only screen and (min-width: 768px) {
+        margin-top: -53px;
+        margin-right: 37px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
+    }
+
+    .rate {
+      margin-bottom: 4px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      div {
+        display: inline-block;
+        .stars {
+          display: table;
+          i {
+            display: table-cell;
+            font-size: 13px;
+          }
+        }
+      }
+      a {
+        /* font-weight: normal; */
+      }
+    }
+    .box-location > i {
+      margin-top: 0;
+    }
+
+    .action {
+      margin-top: 15px;
+
+      @media only screen and (min-width: 992px) {
+        margin-top: 30px;
+        margin-left: auto;
+        align-self: start;
+      }
+      .fa-comment-alt-lines {
+        margin-right: 6px;
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  // products list
+  &__products {
+    .product-list {
+      background: none;
+
+      @media only screen and (min-width: 992px) {
+        padding: 70px 0;
+      }
+
+      &__head .btn {
+        @media only screen and (max-width: 767px) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+div.main-content-wrapper > div.container > section.product-items{padding-top:70px;}
+div.main-content-wrapper > div.container.last{padding-bottom:70px;}
+
+.expand-custom-icon {
+    background-image: url("../images/Expand-custom-icon.svg");
+    width: 18px;
+    height: 18px;
+}
+.collapse-custom-icon {
+    background-image: url("/images/Collapse-custom-icon.svg");
+    width: 18px;
+    height: 18px
+}

@@ -1,0 +1,317 @@
+.post-item {
+  height: 100%;
+  border-color: $color-gray-light;
+  transition: $transition;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
+
+  &:hover {
+    .post-item__overlay-actions {
+      display: block;
+    }
+    .post-item__overlay-quickview {
+      display: inline-block;
+    }
+  }
+  .badge {
+    &-info {
+      background-color: $color-info-dark;
+    }
+  }
+
+  &__image {
+    border-bottom: none;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      border-bottom: 1px solid $color-gray-light;
+    }
+    @media only screen and (max-width: 767px) {
+      width: auto;
+      max-width: 113px;
+      margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 768px) {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+
+      @media only screen and (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &__overlay {
+    &-actions {
+      position: absolute;
+      display: none;
+      z-index: 9;
+      top: 0;
+      right: 0;
+      padding: 20px;
+    }
+    &-action {
+      background: $color-gray-darker;
+      display: inline-block;
+      padding: 0;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      color: $white;
+      text-decoration: none !important;
+      position: relative;
+      i {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    &-quickview {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      margin-left: -67px;
+      display: none;
+      .btn {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__body {
+    flex: 1;
+    padding: 25px;
+
+    .badge {
+      margin-bottom: 7px;
+
+      @media only screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .title {
+      margin-bottom: 8px;
+      font: {
+        family: $font-primary;
+        size: 14px;
+        weight: 400;
+      }
+      line-height: 1.2em;
+      color: $color-gray-darker;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: 700;
+    }
+
+    .seller-name {
+      font-size: $h6-font-size;
+      color: $color-gray-darker;
+    }
+
+    .description {
+      margin-bottom: 3px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.5em;
+      color: $color-gray-dark;
+    }
+
+    .price {
+      position: relative;
+      font: {
+        family: $font-primary;
+        size: $base-font-size;
+        weight: 700;
+      }
+      line-height: 1.1em;
+      color: $color-info-dark;
+      .heading {
+        font-weight: 700;
+        font-family: $font-primary;
+        margin-bottom: 0;
+      }
+      .regular-price {
+        margin-bottom: 0;
+      }
+      .price-label {
+        display: block;
+        font-size: $base-font-size;
+      }
+    }
+    &.post-item__body ~ div {
+      width: 100%;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $color-gray-light;
+    form {
+      width: 100%;
+    }
+    @media only screen and (max-width: 767px) {
+      flex: 1 100%;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      color: $color-gray-darker;
+
+      &:hover,
+      &:focus {
+        color: $color-info-dark;
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__list-item {
+    border-bottom: 1px solid $color-gray-light;
+    &-link {
+      display: block;
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    .post-item__action {
+      border-top: none;
+      display: inline-block;
+    }
+    .post-item__overlay-actions {
+      display: inline-block !important;
+      position: relative;
+      padding: 0;
+    }
+    .price {
+      font-family: $font-poster-gothic;
+      font-size: $h3-font-size;
+      color: $color-info-dark;
+      font-weight: 600;
+    }
+    .name {
+      font-size: $base-font-size;
+    }
+    &:hover {
+      box-shadow: none;
+      background: rgba($color-gray-lighter, 0.4);
+    }
+  }
+  &__card {
+    margin-bottom: 0.5rem;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &.post-item__list-item {
+    .post-item__list-item-link {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+    }
+    .special-price-content {
+      .special-price {
+        font-weight: 700;
+      }
+      .regular-price {
+        margin-bottom: -10px;
+      }
+    }
+    .price {
+      .heading {
+        font-weight: 700;
+        font-family: $font-primary;
+      }
+    }
+    .post-item__overlay-action {
+      background: transparent;
+      i {
+        color: $color-black;
+      }
+      &:hover {
+        i {
+          color: $color-info;
+        }
+      }
+    }
+  }
+}
+
+.post-item, .compare-products__list-item {
+  .special-price-content {
+    .sticker.sale {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0 10px 3px 0;
+      font-size: $font-sm;
+      font-weight: bold;
+    }
+    .special-price {
+      display: inline-block;
+      vertical-align: middle;
+      font-family: serif;
+      font-family: $font-primary;
+      margin-right: 5px;
+    }
+    .regular-price {
+      font-family: $font-primary;
+      color: $color-gray;
+      text-decoration: line-through;
+      font-size: $font-sm;
+      font-weight: initial;
+      display: inline-block;
+      line-height: initial;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+div.links > a.unset.wishlist-icon > a {
+  background: transparent;
+}
+div.links > a.unset.wishlist-icon > a > i {
+  top: 0px;
+}

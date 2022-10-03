@@ -1,0 +1,19 @@
+.store-settings {
+    .seller-plan-card__title {
+        font-weight: 700;
+    }
+    .seller-plan-card--selected {
+        .seller-plan-card__link {
+            .btn {
+                color: $color-primary;
+                background: $color-black;
+                border-color: $color-black;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .seller-plan-card__description {
+        font-size: $h6-font-size;
+    }
+}

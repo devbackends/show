@@ -1,0 +1,92 @@
+.filter-row-one {
+    margin-bottom: 0;
+}
+
+.filter-tag {
+    .wrapper {
+        display: inline-block;
+        flex-direction: inherit;
+        align-items: inherit;
+        font-size: inherit;
+        height: inherit;
+        border-radius: inherit;
+        margin-left: inherit;
+        padding: inherit;
+        background: none;
+        color: inherit;
+        letter-spacing: inherit;
+    }
+    &.badge {
+        padding: 8px;
+    }
+}
+
+.table {
+    table {
+        thead {
+            th {
+                font-size: $font-sm;
+                padding: 10px;
+            }
+        }
+        tbody {
+            td {
+                font-size: $font-sm;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+td.actions {
+    .action {
+        .fa-plus-circle,
+        .fa-minus-circle,
+        .fa-eye,
+        .fa-pencil,
+        .fa-trash-alt {
+          font-size: 20px;
+        }
+        .fa-trash-alt {
+          color: $danger;
+          &:hover {
+            color: $danger-dark;
+          }
+        }
+        .fa-pencil, .fa-eye {
+          color: $info-dark;
+          &:hover {
+            color: $info;
+          }
+        }
+        .fa-plus-circle,
+        .fa-minus-circle {
+            color: $black;
+            &:hover {
+              color: $info-dark;
+            }
+        }
+      }
+}
+
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    .page-item {
+        padding: 6px 12px;
+        &.active {
+            background: $black;
+            border-color: $black;
+            color: $white;
+            font-size: $paragraph-bold;
+        }
+        &.next, &.previous {
+            padding: 6px 12px;
+        }
+        &__disabled {
+            opacity: 0.5;
+        }
+    }
+    
+}

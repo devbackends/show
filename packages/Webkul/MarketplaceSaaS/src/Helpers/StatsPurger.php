@@ -1,0 +1,74 @@
+<?php
+
+namespace Webkul\MarketplaceSaaS\Helpers;
+
+use DB;
+use Webkul\Category\Repositories\CategoryRepository as Category;
+use Webkul\Core\Repositories\LocaleRepository as Locale;
+use Webkul\Core\Repositories\CurrencyRepository as Currency;
+use Webkul\Core\Repositories\ChannelRepository as Channel;
+use Webkul\Attribute\Repositories\AttributeRepository as Attribute;
+use Webkul\Attribute\Repositories\AttributeOptionRepository as AttributeOption;
+use Webkul\Attribute\Repositories\AttributeFamilyRepository as AttributeFamily;
+use Webkul\Attribute\Repositories\AttributeGroupRepository as AttributeGroup;
+use Webkul\Customer\Repositories\CustomerGroupRepository as CustomerGroup;
+use Webkul\Product\Repositories\ProductRepository as Product;
+
+/**
+ * Class meant for extracting essential information about the seller
+ */
+class StatsPurger
+{
+    protected $category;
+    protected $locale;
+    protected $currency;
+    protected $channel;
+    protected $attribute;
+    protected $attributeFamily;
+    protected $attributeGroup;
+    protected $customerGroup;
+    protected $product;
+    protected $seedCompleted = true;
+
+    public function __construct(
+        Category $category,
+        Locale $locale,
+        Currency $currency,
+        Channel $channel,
+        Attribute $attribute,
+        AttributeFamily $attributeFamily,
+        AttributeGroup $attributeGroup,
+        CustomerGroup $customerGroup,
+        Product $product
+    )
+    {
+        $this->category = $category;
+        $this->locale = $locale;
+        $this->currency = $currency;
+        $this->channel = $channel;
+        $this->attribute = $attribute;
+        $this->attributeFamily = $attributeFamily;
+        $this->attributeGroup = $attributeGroup;
+        $this->customerGroup = $customerGroup;
+        $this->product = $product;
+    }
+
+    public function getAggregates()
+    {
+        $products = DB::table('products')->count();
+        $attributes = DB::table('attributes')->count();
+        $customers = DB::table('customers')->count();
+        $customerGroups = DB::table('customer_groups')->count();
+        $categories = DB::table('categories')->count();
+        $sellers = DB::table('marketplace_sellers')->count();
+
+        return [
+            'products' => $products,
+            'attributes' => $attributes,
+            'customers' => $customers,
+            'customer-groups' => $customerGroups,
+            'categories' => $categories,
+            'sellers' => $sellers
+        ];
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "bagisto/laravel-TableRate-Shipping",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vivek Sharma",
+            "email": "viveksh047@webkul.com"
+        }
+    ],
+    "require": {
+        "konekt/concord": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\TableRate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\TableRate\\Providers\\TableRateServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}

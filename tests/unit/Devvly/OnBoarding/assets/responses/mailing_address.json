@@ -1,0 +1,14 @@
+{
+  "line1":"100 Main Street, Suite B",
+  "line2":"100 Main Street, Suite B",
+  "line3":"100 Main Street, Suite B",
+  "city":"Pleasantville",
+  "stateCode":"MN",
+  "zip":"55555",
+  "countryCode":840,
+  "modifyDateTimeUtc":null,
+  "metadata":{
+    "exchangeId":"ID-da364812-e0f5-4003-bed3-09739368c2c8",
+    "timestamp":"2020-05-22T10:51:21.1296451Z"
+  }
+}

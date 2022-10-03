@@ -1,0 +1,69 @@
+.date-picker-input {
+    background: transparent;
+    background-color: transparent;
+}
+.date-picker-icon {
+    position: relative;
+    display: block;
+    height: 44px;
+    &::after {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        content: "\f073";
+        position: absolute;
+        right: 0.85rem;
+        top: 0.5rem;
+        font-size: 1.25rem;
+        pointer-events: none;
+        color: $color-gray-darker;
+    }
+}
+
+.form-control.flatpickr-input {
+    position: relative;
+    z-index: 0;
+    &[readonly] {
+        /* background: url("../images/date-picker-calendar-icon.svg") no-repeat calc(100% - 10px) center; */
+        position: relative;
+        background: $color-white;
+        z-index: 0;
+    }
+    &.timepicker {
+        /* background: url("../images/date-time-clock-icon.svg") no-repeat calc(100% - 10px) center; */
+        background: $color-white;
+        position: relative;
+        z-index: 0;
+        padding-right: 2rem;
+    }
+}
+
+.date__flatpickr {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    &::after {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 500;
+        content: '\f073';
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.25rem;
+        pointer-events: none;
+        color: $color-gray-darker;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+}
+
+::-webkit-calendar-picker-indicator {
+    background: url(../images/icon-calendar.svg) no-repeat;
+}
+
+.form-control[type^="date"] {
+    background-color: transparent;
+}

@@ -1,0 +1,26 @@
+
+@import "colors";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "fonts";
+@import "variables";
+
+@import "old-custom-styles";
+
+
+@import "components/base";
+@import "components/buttons";
+@import "components/tables";
+@import "components/dashboard";
+@import "components/navbar";
+@import "components/forms";
+
+#laraberg__editor{
+    .interface-interface-skeleton__header,
+    .interface-interface-skeleton__sidebar,
+    .components-notice-list.components-editor-notices__dismissible,
+    .components-notice-list.components-editor-notices__pinned,
+    .components-popover,
+    .interface-interface-skeleton__left-sidebar{
+        z-index: 2;
+    }
+}

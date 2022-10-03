@@ -1,0 +1,20 @@
+# The routes of the project.
+#
+# Each route describes how an incoming URL is going
+# to be processed by Platform.sh.
+
+"https://www.2agunshow.com/":
+  type: upstream
+  upstream: "app:http"
+"https://2agunshow.com/":
+  type: redirect
+  to: "https://www.2agunshow.com/"
+"https://{default}/":
+  type: upstream
+  upstream: "app:http"
+"https://app.{default}/":
+  type: upstream
+  upstream: "app:http"
+"https://*.{default}/":
+  type: upstream
+  upstream: "app:http"

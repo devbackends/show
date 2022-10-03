@@ -1,0 +1,64 @@
+.community {
+    &__item {
+/*         margin-bottom: 15px;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 30px;
+        } */
+        height: auto !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background-position-y: center !important;
+    }
+    &__gun-shows {
+        background: url(../images/bg-community-gun-shows.jpg) 50% 0/cover no-repeat;
+
+    }
+    &__instructors {
+        background: url(../images/bg-community-instructors.jpg) 50% 0/cover no-repeat;
+    }
+    &__gun-ranges {
+        background: url(../images/bg-community-gun-ranges.jpg) 50% 0/cover no-repeat;
+    }
+    &__ffl {
+        background: url(../images/bg-community-ffl.jpg) 50% 0/cover no-repeat;
+    }
+    &__clubs {
+        background: url(../images/bg-community-clubs.jpg) 50% 0/cover no-repeat;
+    }
+}
+
+.community-page-links {
+    .community__item {
+        display: block !important;
+        margin-bottom: 30px;
+    }
+}
+
+.home-community-section {
+    .community {
+        //background: rgba($color-gray-light, 0.2);
+        background: $color-gray-darker;
+        .h1 {
+            color: $color-white;
+        }
+        .slick-arrow {
+            &::before {
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.error-404-community-section {
+    background: $color-gray-lighter;
+}
+
+.buy-all {
+    &__select {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: auto;
+          }
+    }
+}

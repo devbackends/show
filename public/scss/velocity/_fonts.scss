@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    src: url("../fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Open Sans Bold";
+    font-style: normal;
+    src: url("../fonts/open-sans/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "PosterGothicATF";
+    src: url("../fonts/poster/PosterGothicATF-Bold.otf") format("opentype");
+}
+
+$paragraph: "Open Sans";
+$heading: "Open Sans Bold";
+
+$font-xxl: 48px;
+$font-xl: 36px;
+$font-lg: 24px;
+$font-md: 16px;
+$font-sm: 13px;
+
+%heading {
+    font-family: $heading;
+}
+%heading-1 {
+    @extend %heading;
+    font-size: $font-xxl;
+}
+%heading-2 {
+    @extend %heading;
+    font-size: $font-xl;
+}
+%heading-3 {
+    @extend %heading;
+    font-size: $font-lg;
+}
+%heading-4 {
+    @extend %heading;
+    font-size: $font-md;
+}
+%heading-5 {
+    @extend %heading;
+    font-size: $font-sm;
+}
+
+%paragraph {
+    font-family: $paragraph;
+    font-size: $font-md;
+}
+%paragraph-bold {
+    @extend %heading-4;
+}
+
+%paragraph-small {
+    font-family: $paragraph;
+    font-size: $font-sm;
+}
+%paragraph-small-bold {
+    @extend %heading-5;
+}
+
+h1 {
+    @extend %heading-1;
+}
+h2 {
+    @extend %heading-2;
+}
+h3 {
+    @extend %heading-3;
+}
+h4 {
+    @extend %heading-4;
+}

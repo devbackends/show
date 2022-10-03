@@ -1,0 +1,71 @@
+.ffl-list {
+    &__hero {
+        background: url(../images/bg-ffl-hero.jpg);
+        background-size: cover;
+        text-align: center;
+        padding: 5rem;
+        color: $color-white;
+    }
+    &__filter {
+        &-miles {
+            max-width: 90px !important;
+        }
+    }
+    &__item {}
+}
+.ffl-list-item {
+    &__container {
+        padding: 1rem;
+    }
+    &__license-name {
+        text-transform: capitalize;
+    }
+    &__name {
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    &__address {
+        text-transform: capitalize;
+    }
+}
+
+.ffl-detail {
+    &__license-info {
+        background: $color-gray-lighter;
+        .form-group {
+            margin-bottom: 0;
+            max-width: 350px;    
+        }
+    }
+    .form-group {
+        p {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+    &__address-info {}
+    &__social {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 30px;
+        &-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 0.5rem;
+            background: $color-gray-darker;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.8rem;
+            i {
+                color: $color-white;
+            }
+        }
+    }
+    &__fees {
+        &-content {
+            border-top: 1px solid $color-gray-light;
+            padding-top: 2rem;
+        }
+    }
+}

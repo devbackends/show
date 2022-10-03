@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214.71 214.71">
+<defs>
+<style>.cls-1{fill:#f2cb05;}.cls-2{fill:#fff;}</style>
+    <style>
+    .cls-1 {
+        fill: #FFC107;
+    }
+    .cls-2 {
+        fill: #111111;
+    }
+    @media (prefers-color-scheme: dark) {
+        .cls-2 {
+            fill: #FFFFFF;
+        }
+    }
+    </style>
+</defs>
+<title>favicon</title>
+<circle class="cls-1" cx="107.36" cy="107.36" r="24.54"/>
+<path class="cls-2" d="M214.71,96.86H196.36a89.79,89.79,0,0,0-78.5-78.51V0h-21V18.35A89.79,89.79,0,0,0,18.35,96.86H0v21H18.35a89.79,89.79,0,0,0,78.51,78.5v18.35h21V196.36a89.79,89.79,0,0,0,78.5-78.5h18.35Zm-96.85,78.31V158.24h-21v16.93a68.78,68.78,0,0,1-57.32-57.31H56.47v-21H39.54A68.78,68.78,0,0,1,96.86,39.54V56.47h21V39.54a68.78,68.78,0,0,1,57.31,57.32H158.24v21h16.93A68.78,68.78,0,0,1,117.86,175.17Z"/>
+</svg>

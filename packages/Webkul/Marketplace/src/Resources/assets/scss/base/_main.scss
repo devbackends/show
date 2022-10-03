@@ -1,0 +1,221 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 400;
+  color: $body-color;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h4 {
+  font-family: $font-secondary;
+
+  &.filled {
+    display: inline-block;
+    margin: 0;
+    padding: .5rem 1rem;
+
+    @media only screen and (min-width: 992px) {
+      padding: 1rem 1.4rem;
+    }
+  }
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size * .75;
+  font-weight: 700;
+
+  @media only screen and (min-width: 992px) {
+    font-size: $h1-font-size;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size * .75;
+  font-weight: 700;
+
+  @media only screen and (min-width: 992px) {
+    font-size: $h2-font-size;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+}
+
+small {
+  font-size: $base-font-size * .75; // 12px
+}
+
+// primary logo
+.brand-logo {
+  display: inline-block;
+  background: url(../images/gunshow-logo-small.svg) 0 0/100% auto no-repeat;
+  width: 115px;
+  height: 23px;
+
+  @media only screen and (min-width: 992px) {
+    width: 147px;
+    height: 30px;
+  }
+
+  &--white {
+    width: 124px;
+    height: 25px;
+    background: url(../images/gunshow-logo-white.svg) 0 0/100% auto no-repeat;
+  }
+}
+
+// overwrite bootstrap container
+@media only screen and (min-width: 1230px) {
+  .container {
+    max-width: 1230px;
+  }
+}
+
+// main wrapper for the page content
+.main-content-wrapper {
+  padding-top: 62px; // space for the fixed header
+
+  @media only screen and (min-width: 992px) {
+    padding-top: 0;
+  }
+}
+
+// link
+a {
+  color: $color-info-dark;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-info;
+    text-decoration: none;
+  }
+}
+
+
+
+
+.modal__ffl {
+    padding: 0
+}
+
+.modal__ffl-left {
+    position: relative;
+    padding: 30px
+}
+
+.modal__ffl-preferred-text {
+    background-image: url("/images/ffl-preferred-icon.svg");
+    background-position: 0;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 30px
+}
+
+.modal__ffl-list {
+    max-height: 400px;
+    overflow: auto
+}
+
+.modal__ffl-list-item {
+    position: relative;
+    padding: 8px;
+    border-bottom: 1px solid #ddd
+}
+
+.modal__ffl-list-item p {
+    margin-bottom: 0
+}
+
+.modal__ffl-list-item-preferred {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.modal__ffl-list-item-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: hsla(0,0%,100%,.6)
+}
+
+.modal__ffl-list-item:hover .modal__ffl-list-item {
+    border-bottom: 1px solid transparent
+}
+
+.modal__ffl-list-item:hover .modal__ffl-list-item-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border: 2px solid $color-primary;
+}
+
+.modal__ffl-search {
+    margin-bottom: 15px
+}
+
+.modal__ffl #map .vue-map-container {
+    width: 100%!important;
+    height: 100%!important
+}
+
+.social-links {
+    position: relative;
+    margin-left: -0.75rem;
+    .btn-link {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .social-icon{
+        display: inline-block;
+        background-position-x: center;
+        background-position-y: center;
+        width: 40px;
+        height: 40px;
+        background-size: 110%;
+    }
+}
+
+.body-gun-giveaway {
+  #kayako-messenger {
+    display: none;
+  }
+}

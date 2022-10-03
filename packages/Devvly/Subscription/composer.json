@@ -1,0 +1,25 @@
+{
+    "name": "devvly/subscription",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "devvly",
+            "email": "info@devvly.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\Subscription\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\Subscription\\Providers\\SubscriptionServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

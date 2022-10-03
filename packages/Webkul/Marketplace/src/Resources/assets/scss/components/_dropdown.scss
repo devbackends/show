@@ -1,0 +1,53 @@
+// dropdown
+.dropdown {
+
+  // toggle
+  &-toggle {
+    &:after {
+      display: none;
+    }
+    .fa-chevron-down {
+      font-size: 12px;
+    }
+  }
+
+  // menu
+  &-menu {
+    min-width: 232px;
+    margin: .5rem 0 0;
+    border: 0 none;
+    padding: 13px 0;
+    box-shadow: $box-shadow;
+    background-color: $color-white;
+    font-size: 1rem;
+    color: $color-gray-darker;
+
+    &-divider {
+      border-top-color: $color-gray-light;
+    }
+
+    // cart modification
+    &--cart {
+      min-width: 300px;
+      padding: 11px 0 0;
+
+      @media only screen and (min-width:576px) {
+        width: 464px;
+        margin-right: -5px;
+      }
+    }
+  }
+
+  &-item {
+    padding: 5px 19px;
+    color: inherit !important;
+
+    &:hover,
+    &:focus {
+      color: $color-info-dark !important;
+    }
+    &:active:hover {
+      color: $color-black !important;
+    }
+  }
+}

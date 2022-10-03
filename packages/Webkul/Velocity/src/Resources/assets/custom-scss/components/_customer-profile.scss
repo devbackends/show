@@ -1,0 +1,113 @@
+.customer-profile {
+    &__title {
+    }
+    &.cart-details {
+        padding: 40px !important;
+        position: relative;
+    }
+    .compare-products {
+        margin: 0 -40px;
+        & > tr > td:first-child {
+            padding-right: 0;
+        }
+    }
+    &__compare {
+        &-price {
+            text-align: center;
+        }
+        &-action {
+            position: relative;
+            .btn-outline-primary {
+                display: inline-block;
+                &:disabled {
+                    color: $gray-dark;
+                }
+                span {
+                    font-family: $heading;
+                }
+            }
+            .compare-icon {
+                display: none;
+            }
+            .add-to-cart-btn {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .wishlist-icon {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                right: inherit;
+                height: auto;
+                top: initial;
+                i {
+                    font-size: $font-lg !important;
+                }
+            }
+            &-close {
+                font-size: $font-lg !important;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+    .scroll-container {
+        width: 100%;
+        position: absolute;
+        top: 250px;
+        left: 0;
+        .table-scrol-left-icon {
+            position: absolute;
+            left: 160px;
+        }
+        .table-scrol-right-icon {
+            position: absolute;
+            right: 70px;
+        }
+    }
+    &__content {
+        &-wrapper {
+            padding: 40px;
+        }
+        &-profile-info {
+            label {
+                margin-bottom: 0;
+            }
+            p {
+                @extend %paragraph-bold;
+                margin-bottom: 0;
+            }
+        }
+        &-header {
+            position: relative;
+            margin-bottom: 30px;
+            &-back {
+                display: inline-block;
+                vertical-align: bottom;
+                margin-right: 10px;
+                i {
+                    padding-right: 0;
+                    font-size: $font-lg;
+                    color: $gray-darker;
+                }
+                &:hover {
+                    i {
+                        color: $black;
+                    }
+                }
+            }
+            &-title {
+                display: inline-block;
+                vertical-align: bottom;
+                margin-bottom: 0;
+            }
+            &-actions {
+                
+            }
+        }
+    }
+}
+
+table.compare-products > tr > td:first-child {
+    padding: 10px 25px 10px 0;
+}

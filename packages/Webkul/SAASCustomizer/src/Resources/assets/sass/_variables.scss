@@ -1,0 +1,86 @@
+$dark-bg: #222d32;
+$btn-primary: #00a65a;
+$form-bg: #ecf0f5;
+$white-bg: #FFFFFF;
+$border-color: #c7c7c7;
+
+
+/**
+ * Colors.
+ */
+
+ $color-primary-lighter: #FFF48E;
+ $color-primary-light: #FFED4E;
+ $color-primary: #FFD913;
+ $color-primary-dark: #EFD700;
+ $color-primary-darker: #D9C300;
+ 
+ $color-secondary-lighter: #FDCACF;
+ $color-secondary-light: #FB7C88;
+ $color-secondary: #DC3545;
+ $color-secondary-dark: #B91A29;
+ $color-secondary-darker: #880E19;
+ 
+ $color-gray-lighter: #EBEBEB;
+ $color-gray-light: #DDD;
+ $color-gray: #9D9D9D;
+ $color-gray-dark: #666;
+ $color-gray-darker: #333;
+ 
+ $color-info: #2ECEE8;
+ $color-info-dark: #0C91A6;
+ 
+ $color-warning: #FFC107;
+ $color-warning-dark: #E6AC00;
+ 
+ $color-danger: #F21313;
+ $color-danger-dark: #CA1111;
+ 
+ $color-success: #28A745;
+ $color-success-dark: #188831;
+ 
+ $white: #FFFFFF;
+ $black: #111111;
+ 
+ $color-black: #111111;
+ $color-black-10: rgba($color-black, .1);
+ $color-black-25: rgba($color-black, .25);
+ $color-black-30: rgba($color-black, .3);
+ $color-black-50: rgba($color-black, .5);
+ $color-black-70: rgba($color-black, .7);
+ $color-black-90: rgba($color-black, .9);
+ 
+ $color-white: #fff;
+ $color-white-10: rgba(#fff, .1);
+ $color-white-30: rgba(#fff, .3);
+ $color-white-50: rgba(#fff, .5);
+ $color-white-70: rgba(#fff, .7);
+ $color-white-90: rgba(#fff, .9);
+ 
+ $body-color: $color-black;
+ 
+ $transition: all .15s ease;
+ 
+ $box-shadow: 0 0 8px $color-black-25;
+ $box-shadow-normal: 0 0 5px $color-black-25;
+ $box-shadow-think: 0 0 4px $color-black-25;
+ $box-shadow-10: 0 0 10px $color-black-10;
+ 
+ $border-radius: 4px;
+ 
+ 
+ 
+ $font-lg: 1.5rem;
+ $font-md: 1rem;
+ $font-sm: 0.8rem;
+ 
+ $z-index-cart-dropdown: 300;
+ $z-index-alerts: 200;
+ $z-index-announcement: 210;
+ $z-index-sticky-header: 210;
+ $z-index-sidebar-nav: 110;
+ $z-index-category-menu-header: 100;
+ $z-index-product-thumbs: 92;
+ $z-index-product-image: 90;
+ $z-index-sidebar: 90;
+ 

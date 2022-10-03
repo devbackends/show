@@ -1,0 +1,14 @@
+{
+  "bank_name": "test",
+  "name_on_account": "test",
+  "bank_account_type_id": 1,
+  "bank_account_name_type_id": 1,
+  "aba": "111000038",
+  "account_number": "111000038",
+  "voided_check_document_path": null,
+  "license_id_document_path": null,
+  "has_fees": true,
+  "has_funds": true,
+  "has_chargebacks": true,
+  "is_name_same_as_legal_or_dba_name": true
+}

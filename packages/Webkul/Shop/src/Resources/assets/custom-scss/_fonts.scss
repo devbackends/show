@@ -1,0 +1,52 @@
+@import url("https://use.typekit.net/wsj6owo.css");
+
+html,
+body {
+    height: 100%;
+}
+
+$paragraph: "objektiv-mk1", sans-serif;
+$paragraph-regular: 400;
+$paragraph-medium: 500;
+$paragraph-bold: 700;
+$paragraph-extrabold: 800;
+$paragraph-black: 900;
+$heading: "poster-gothic-atf", sans-serif;
+$heading-light: 300;
+$heading-regular: 400;
+$heading-medium: 500;
+$heading-bold: 600;
+$heading-heavy: 700;
+
+$font-xxl: 48px;
+$font-xl: 36px;
+$font-lg: 24px;
+$font-md: 16px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading;
+    font-weight: $heading-bold;
+}
+
+h1 {
+    font-size: $font-xxl;
+}
+
+h2 {
+    font-size: $font-xl;
+}
+h3 {
+    font-size: $font-lg;
+}
+h4 {
+    font-size: $font-md;
+}
+
+.paragraph-big {
+    font-size: $font-lg;
+}

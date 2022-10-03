@@ -1,0 +1,22 @@
+// truncate text
+@mixin truncate-text($width: 100%, $white-space: nowrap, $overflow: hidden, $text-overflow: ellipsis) {
+  width: $width;
+  white-space: $white-space;
+  overflow: $overflow;
+  text-overflow: $text-overflow;
+}
+
+// reset list style
+@mixin reset-list($margin: 0, $padding: 0, $list-style-type: none) {
+  margin: $margin;
+  padding: $padding;
+  list-style-type: $list-style-type;
+}
+
+// placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder {@content}
+  &::-moz-placeholder {@content}
+  &:-ms-input-placeholder {@content}
+}

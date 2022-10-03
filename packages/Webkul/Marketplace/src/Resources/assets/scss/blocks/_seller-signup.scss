@@ -1,0 +1,180 @@
+.seller-signup {
+    .form-notice{
+        padding: 3px 0 10px 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        .notice-icon{
+            padding: 0 5px;
+            font-size: 24px;
+            position: relative;
+            top: 4px;
+        }
+    }
+    .custom-switch {
+        margin-bottom: 0.75rem;
+    }
+    .input-group {
+        .input-group-prepend {
+            .input-group-text {
+                background: transparent;
+                padding: 9px 15px;
+                border-radius: 0.25rem 0 0 0.25rem;
+            }
+        }
+        .form-control {
+            border-radius: 0 0.25rem 0.25rem 0;
+        }
+    }
+    &__success {
+        .form-section__title {
+            @extend %font-paragraph-xl-bold;
+        }
+        &-cta {
+            background: url(../images/image-box-handguns.jpg);
+            background-position-y: center;
+            background-size: cover;
+            border-radius: 0.25rem;
+            padding: 2.25rem;
+            @include media-breakpoint-down(sm) {
+                padding: 1.5rem;
+            }
+            &-text {
+                @extend %font-paragraph-xl-bold;
+                color: $color-primary;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__processing {
+        -moz-box-shadow: inset 0 -10px 10px -10px rgba($color-black, 0.25);
+        -webkit-box-shadow: inset 0 -10px 10px -10px  rgba($color-black, 0.25);
+        box-shadow: inset 0 -10px 10px -10px  rgba($color-black, 0.25);
+        iframe {
+            /* border: 1px solid $color-gray-light; */
+            width: 100%;
+            height: 400px;
+        }
+    }
+}
+.seller-plan-card {
+    text-align: center;
+    padding: 3rem 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    &--recommended {
+        border: 1px solid $color-gray-light;
+        //box-shadow: $box-shadow;
+        position: relative;
+        &-badge {
+            position: absolute;
+            top: -27px;
+            right: -27px;
+        }
+        .seller-plan-card__title {
+            padding-bottom: 1rem;
+            span {
+                background: $color-black;
+                color: $color-primary;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                @include media-breakpoint-down(md) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &--selected {
+        background: $color-gray-lighter;
+    }
+    &__link {
+        margin-bottom: 0.5rem;
+        .btn {
+            justify-content: center;
+        }
+    }
+    &__title {
+        padding-bottom: 1.5rem;
+    }
+    &__features {
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 0;
+        li {
+            border-top: 1px solid $color-gray-light;
+            padding: 0.75rem 0;
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+    &__price {
+        color: $color-info-dark;
+        margin-bottom: 1rem;
+        &-no-fee {
+            @extend %font-paragraph-big-bold;
+            color: $color-black;
+            margin-bottom: 0;
+        }
+        &-number {
+            @extend %font-paragraph-xl-bold;
+            margin-bottom: 0;
+        }
+        &-description {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.seller-plus-modal {
+    position: relative;
+    overflow: hidden;
+    .close {
+        position: absolute;
+        z-index: 2;
+        right: 1rem;
+        top: 1rem;
+        text-shadow: none;
+        line-height: 0;
+        i {
+            font-size: 1.25rem;
+        }
+    }
+    .modal-body {
+        padding: 0;
+    }
+    &__side-info {
+        background: $color-gray-extralight;
+        padding: 3rem 2rem;
+        height: 100%;
+        position: relative;
+        &-logo {
+            border-bottom: 1px solid $color-gray-light;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .seller-plan-card__price-number {
+            line-height: 1;
+        }
+        &::before {
+            position: absolute;
+            left: calc(100% - 5px);
+            top: 3rem;
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 24.5px 0 24.5px 30px;
+            border-color: transparent transparent transparent $color-gray-extralight;
+        }
+    }
+    &__content {
+        padding: 3rem 2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .seller-plan-card__price {
+        margin-bottom: 2rem;
+    }
+}

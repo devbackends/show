@@ -1,0 +1,65 @@
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.mp-facebook-icon {
+    background-image: url("../images/old/mp-facebook.svg");
+}
+
+.mp-twitter-icon {
+    background-image: url("../images/old/mp-twiter.svg");
+}
+
+.mp-instagram-icon {
+    background-image: url("../images/old/mp-instagram.svg");
+}
+
+.mp-pinterest-icon {
+    background-image: url("../images/old/mp-pinterest.svg");
+}
+
+.mp-skype-icon {
+    background-image: url("../images/old/mp-skype.svg");
+}
+
+.mp-linked-in-icon {
+    background-image: url("../images/old/mp-linked-in.svg");
+}
+
+.mp-youtube-icon {
+    background-image: url("../images/old/mp-youtube.svg");
+}
+
+.mp-parler-icon {
+    background: url("../images/mp-parler.svg") no-repeat center;
+    background-position-y: 10px;
+}
+
+.mp-gab-icon {
+    background: url("../images/mp-gab.svg") no-repeat center;
+    background-position-y: 11px;
+}
+
+.marketplace-icon {
+    width: 48px;
+    height: 32px;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("../images/old/Icon-Marketplace.svg");
+}
+
+.active {
+    .marketplace-icon {
+        background-image: url("../images/old/Icon-Marketplace-Active.svg");
+    }
+
+    &.marketplace-icon {
+        background-image: url("../images/old/Icon-Marketplace-Active.svg");
+    }
+}
+.expand-custom-icon {
+    background-image: url("../images/Expand-custom-icon.svg");
+    width: 24px;
+    height: 24px;
+}

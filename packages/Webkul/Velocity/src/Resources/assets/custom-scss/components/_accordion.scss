@@ -1,0 +1,21 @@
+.accordian {
+    .accordian-header {
+        position: relative;
+        padding: 15px 0 !important;
+        .form-header {
+            display: inline-block;
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+/*         i.rango-arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            right: 0;
+        } */
+    }
+    .accordian-content {
+        padding-bottom: 15px;
+    }
+}

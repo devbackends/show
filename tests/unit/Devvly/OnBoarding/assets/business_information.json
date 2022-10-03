@@ -1,0 +1,100 @@
+{
+  "merchant": {
+    "merchant_number": "6588000000060673",
+    "dba_name": "test",
+    "phones": [
+      {
+        "phone_type_code_id": 5,
+        "area_code": "111",
+        "phone_number": "1111111",
+        "extension": "111"
+      },
+      {
+        "phone_type_code_id": 5,
+        "area_code": "112",
+        "phone_number": "1111111",
+        "extension": "111"
+      }
+    ],
+    "email_address": "test@test.com",
+    "web_site": "test.com",
+    "accepts_paper_statements": true,
+    "accepts_paper_tax_forms": true,
+    "company_type_id": "1",
+    "seasonal_schedule": [
+      "january",
+      "february"
+    ]
+  },
+  "physical_address": {
+    "line1": "100 Main Street, Suite B",
+    "line2": "100 Main Street, Suite B",
+    "line3": "100 Main Street, Suite B",
+    "city": "Pleasantville",
+    "country_code": "840",
+    "state_code": "MN",
+    "zip": "55555"
+  },
+  "mailing_address": {
+    "line1": "100 Main Street, Suite B",
+    "line2": "100 Main Street, Suite B",
+    "line3": "100 Main Street, Suite B",
+    "city": "Pleasantville",
+    "country_code": "840",
+    "state_code": "MN",
+    "zip": "55555"
+  },
+  "business_contacts": [
+    {
+      "title": "test",
+      "is_compass_user": true,
+      "is_authorized_to_purchase": true,
+      "email_address": "test@test.com",
+      "ownership_amount": 10,
+      "phone_numbers": [
+        {
+          "phone_type_code_id": 5,
+          "area_code": "111",
+          "phone_number": "1111111",
+          "extension": "111"
+        },
+        {
+          "phone_type_code_id": 5,
+          "area_code": "112",
+          "phone_number": "1111111",
+          "extension": "111"
+        }
+      ],
+      "contact_types": [
+        {
+          "contact_type_id": 1
+        },
+        {
+          "contact_type_id": 2
+        }
+      ],
+      "contact": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "ssn": "123121234",
+        "date_of_birth": "1991-01-01",
+        "country_of_citizenship_code": "840",
+        "address": {
+          "line1": "test",
+          "line2": "test",
+          "line3": "test",
+          "city": "test",
+          "state_code": "MN",
+          "zip": "55555",
+          "country_code": "840"
+        }
+      }
+    }
+  ],
+  "tax_payer": {
+    "tin": "121121212",
+    "tin_type_id": "1",
+    "state_incorporated_code": "IL",
+    "business_legal_name": "test"
+  }
+}

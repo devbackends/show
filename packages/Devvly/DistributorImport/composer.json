@@ -1,0 +1,20 @@
+{
+    "name": "devvly/distributorimport",
+    "license": "MIT",
+
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\DistributorImport\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\DistributorImport\\Providers\\DistributorImportServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

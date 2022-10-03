@@ -1,0 +1,120 @@
+//
+// Font faces, stacks and sizes.
+//
+@import url("https://use.typekit.net/wsj6owo.css");
+
+$font-objective:      "objektiv-mk1", sans-serif;
+$font-poster-gothic:  "poster-gothic-atf", sans-serif;
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 1.5; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 3     * $base-font-size;
+$h2-font-size: 2.25  * $base-font-size;
+$h3-font-size: 1.5   * $base-font-size;
+$h4-font-size: 1.125 * $base-font-size;
+$h5-font-size: 1     * $base-font-size;
+$h6-font-size: 0.85  * $base-font-size;
+$font-sm: 0.75  * $base-font-size;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$font-times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$font-times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$font-georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$font-verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$font-tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$font-helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$font-arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+$font-courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+$font-primary:         $font-objective;
+$font-secondary:       $font-poster-gothic;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family:     $font-primary; // The font family set on the html element.
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$font-monospace:       $font-courier;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount:        30px;
+
+// overwrite bootstrap text colors
+.text-primary {
+  color: $color-primary !important;
+}
+
+
+// Other font variables
+
+// Other font variables
+%font-paragraph {
+  font-size: $base-font-size;
+  font-family: $font-objective;
+}
+%font-paragraph-bold {
+  @extend %font-paragraph;
+  font-weight: bold;
+}
+
+%font-paragraph-big {
+  font-family: $font-objective;
+  font-size: $h3-font-size;
+}
+%font-paragraph-big-bold {
+  @extend %font-paragraph-big;
+  font-weight: bold;
+}
+%font-paragraph-xl {
+  font-family: $font-objective;
+  font-size: $h2-font-size;
+}
+%font-paragraph-xl-bold {
+  @extend %font-paragraph-xl;
+  font-weight: bold;
+}
+%font-paragraph-xxl {
+  font-family: $font-objective;
+  font-size: $h1-font-size;
+}
+%font-paragraph-xxl-bold {
+  @extend %font-paragraph-xxl;
+  font-weight: bold;
+}
+.font-paragraph-big {
+  @extend %font-paragraph-big;
+}
+
+.font-paragraph-big-bold {
+  @extend %font-paragraph-big-bold;
+}
+.font-paragraph-xl {
+  @extend %font-paragraph-xl;
+}
+.font-paragraph-xl-bold {
+  @extend %font-paragraph-xl-bold;
+}
+.font-paragraph-xxl {
+  @extend %font-paragraph-xxl;
+}
+.font-paragraph-xxl-bold {
+  @extend %font-paragraph-xxl-bold;
+}
+.text-line-through {
+  text-decoration: line-through;
+}
+

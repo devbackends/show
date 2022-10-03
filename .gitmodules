@@ -1,0 +1,6 @@
+[submodule "custom_packages/hansschouten/laravel-pagebuilder"]
+	path = custom_packages/hansschouten/laravel-pagebuilder
+	url = https://github.com/husseinelhussein/Laravel-Pagebuilder.git
+[submodule "resources/pagebuilder-themes"]
+	path = resources/pagebuilder-themes
+	url = git@gitlab.com:devvly-internal/laravel-pagebuilder-custom-themes.git

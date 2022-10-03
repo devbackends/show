@@ -1,0 +1,15 @@
+.btn {
+    font-family: $objektive;
+    font-weight: $objektive-bold;
+    font-size: $font-md;
+    &-lg {
+        font-size: $font-lg;
+    }
+}
+.btn[class*="btn-outline"] {
+    border-width: 2px;
+}
+
+.btn-lg {
+    padding: 0.75rem 1rem;
+}

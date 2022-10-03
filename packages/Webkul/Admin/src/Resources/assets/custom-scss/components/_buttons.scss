@@ -1,0 +1,97 @@
+.btn {
+    font-family: $paragraph;
+    font-weight: $paragraph-bold;
+    font-size: $font-md;
+    box-shadow: none;
+    border: 2px solid transparent;
+    text-transform: capitalize;
+    height: 38px;
+    width: initial !important;
+    &:active,
+    &:hover {
+        opacity: 1 !important;
+        border: 2px solid;
+    }
+
+    &-sm {
+        font-size: $font-sm;
+        height: 30px;
+        padding: 3px 12px;
+    }
+    i {
+        margin-right: 5px;
+    }
+    &.btn-primary {
+        background: $primary;
+        color: $black;
+        &:hover {
+            background: $primary-dark;
+            border-color: $primary-dark;
+        }
+    }
+    &.btn-outline-primary {
+        color: $gray-darker;
+        border: 2px solid $primary;
+        &:hover {
+            color: $black;
+            border: 2px solid $primary;
+        }
+    }
+    &.btn-black {
+        background: $black;
+        color: $white;
+        &:hover {
+            border: 2px solid $black;
+        }
+    }
+    &.btn-dark {
+        background: $black;
+        color: $white;
+        &:hover {
+            border: 2px solid $black;
+        }
+    }
+}
+
+[class^="btn btn-outline"] {
+    border-width: 2px !important;
+}
+
+.card {
+    .add-to-cart-btn {
+        .btn.btn-outline-primary {
+            width: 100%;
+        }
+    }
+}
+
+.add-to-cart-btn {
+    .btn.btn-outline-primary {
+        &:disabled {
+            color: $gray-dark;
+        }
+        span {
+            font-family: $heading;
+        }
+    }
+}
+
+.whalut .btn{
+    &.btn-primary {
+        background: $whalut-primary;
+        color: $white;
+        &:hover {
+            background: darken($whalut-primary, 15);
+            border-color: darken($whalut-primary, 15);
+        }
+    }
+    &.btn-outline-primary {
+        color: $black;
+        border: 2px solid $whalut-primary;
+        &:hover {
+            color: $white;
+            border: 2px solid $whalut-primary;
+            background-color: $whalut-primary;
+        }
+    }
+}

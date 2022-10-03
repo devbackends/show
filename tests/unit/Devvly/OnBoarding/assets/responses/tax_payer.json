@@ -1,0 +1,14 @@
+{
+  "legalFirstName":null,
+  "legalLastName":null,
+  "tin":"*****1212",
+  "encryptedTIN":null,
+  "tinTypeID":1,
+  "businessLegalName":"test",
+  "stateIncorporatedCode":"IL",
+  "modifyDateTimeUtc":null,
+  "metadata":{
+    "exchangeId":"ID-4bdee3d9-e7d6-4d7d-a599-88849a4a06bf",
+    "timestamp":"2020-05-22T11:02:37.386769Z"
+  }
+}

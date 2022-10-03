@@ -1,0 +1,120 @@
+.dashboard {
+    &__tips {
+        border: 1px solid $gray-light;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        position: relative;
+        &-title {
+            h2,
+            h3 {
+                color: $info-dark;
+            }
+        }
+        &-close {
+            font-size: $font-lg;
+            color: $gray-dark;
+            position: absolute;
+            right: 32px;
+            top: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $gray-darker;
+            }
+        }
+        &-content {
+            .nav-tabs {
+                border-bottom: 1px solid $gray-darker;
+                .nav-item {
+                    a.nav-link {
+                        border-radius: 0;
+                        font-weight: $paragraph-bold;
+                        color: $gray-dark;
+                        border: none;
+                        padding: 1rem !important;
+                        &.active {
+                            background: $gray-darker;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                padding: 30px 0 0;
+            }
+            &-icon {
+                border: 2px solid $primary;
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                i {
+                    font-size: 64px;
+                }
+            }
+            &-big {
+                @extend %paragraph-big;
+                margin-bottom: 30px;
+                &-gray {
+                    font-size: $font-md;
+                    color: $black;
+                }
+            }
+        }
+    }
+    .dashboard-stats,
+    .graph-stats,
+    .sale-stock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-auto-rows: initial;
+        grid-column-gap: initial;
+        grid-row-gap: initial;
+        margin-top: 0;
+        width: initial;
+    }
+    &__card {
+        &-title {
+            color: $gray;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        &-data {
+            &-value {
+                font-size: $font-lg;
+                color: $info-dark;
+            }
+            &-progress {
+                font-size: $font-lg;
+                i {
+                    margin-right: 5px;
+                }
+                &--up {
+                    color: $success;
+                }
+                &--down {
+                    color: $danger;
+                }
+            }
+        }
+    }
+    .card, .dashboard-card {
+        margin-bottom: 30px;
+    }
+}
+.whalut .dashboard .dashboard__tips-content{
+    .nav-tabs{
+        border-bottom: 1px solid $gray-darker;
+        a.nav-link {
+            color: $gray-dark;
+            &.active {
+                background: $whalut-primary;
+                color: $white;
+            }
+        }
+    }
+    &-icon {
+        border: 2px solid $whalut-primary;
+    }
+}

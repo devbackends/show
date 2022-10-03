@@ -1,0 +1,55 @@
+.row {
+    flex-direction: row;
+    justify-content: normal;
+    align-items: stretch;
+}
+
+a:active, a:focus, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: $info-dark;
+}
+
+.main-content {
+    padding: 40px 0;
+}
+
+.content-container .content .page-header, .page-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 25px 15px;
+    .page-title {
+        display: inline-block;
+
+        h3, h1 {
+            margin-bottom: 0;
+            font-size: $font-lg;
+            line-height: 1.3;
+            display: inline-block;
+    vertical-align: middle;
+        }
+    }
+    .page-action {
+        margin-left: auto;
+    }
+}
+
+
+.content-container .content .page-content, .page-content {
+    padding: 25px
+}
+
+.accordian-header .accordian-down-icon {
+    background-image: url("/images/Accordion-cutom-Arrow-Down.svg")
+}
+
+.accordian-header .accordian-up-icon {
+    background-image: url("/images/Accordion-custom-Arrow-Up.svg")
+}
+
+.accordian-up-icon {
+    background-image: url("/images/Accordion-custom-Arrow-Up.svg")
+}
+
+.accordian-down-icon {
+    background-image: url("/images/Accordion-cutom-Arrow-Down.svg")
+}

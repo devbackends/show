@@ -1,0 +1,117 @@
+.accordian, accordian {
+    display: inline-block;
+    width: 100%;
+
+    .accordian-header, div[slot*="header"] {
+        width: 100%;
+        display: inline-block;
+        font-size: 18px;
+        color: $color-black;
+        border-top: solid 1px $color-gray-light;
+        border-bottom: solid 1px $color-gray-light;
+        padding: 1.25rem 1rem;
+        cursor: pointer;
+        margin-top: -1px;
+
+        .expand-icon {
+            background-image: url("../images/Expand-Light.svg");
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .icon {
+            float: right;
+
+            &.left {
+                float: left;
+            }
+        }
+    }
+
+    &.error {
+        .accordian-header {
+            color: #ff5656;
+        }
+    }
+
+    .accordian-content, div[slot*="body"] {
+        width: 100%;
+        padding: 1.25rem 1rem;
+        display: none;
+        transition: 0.3s ease all;
+    }
+
+    &.active > .accordian-content {
+        display: inline-block;
+    }
+
+    &.active > .accordian-header .expand-icon {
+        background-image: url("../images/Expand-Light-On.svg");
+    }
+}
+
+
+.accordian-up-icon {
+    background-image: url("../images/Accordion-Arrow-Up.svg");
+    width: 24px;
+    height: 24px;
+}
+.accordian-down-icon {
+    background-image: url("../images/Accordion-Arrow-Down.svg");
+    width: 24px;
+    height: 24px;
+}
+
+.accordian {
+    .section-title {
+        font-weight: bold;
+    }
+}
+
+.slot-list {
+    .accordian {
+        .accordian-header {
+            padding: 1rem 0 !important;
+            .fa-chevron-circle-down {
+                display: none;
+            }
+            .fa-chevron-circle-right {
+                display: inline-block;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .expand-icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        &.active {
+            .accordian-header {
+
+                .fa-chevron-circle-right {
+                    display: none;
+                }
+                .fa-chevron-circle-down {
+                    display: inline-block;
+                }
+            }
+        }
+        .accordian-content {
+            padding-top: 0;
+        }
+    }
+    .remove-icon {
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+

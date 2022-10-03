@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'PosterGothicATF';
+    src: url('../fonts/poster/PosterGothicATF-Bold.otf') format('opentype');
+}
+
+h1.heading{
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 54px;
+    /* identical to box height */
+    text-align: center;
+}
+#header {
+    display: none;
+}
+
+.top-container {
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+
+.top-title {
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    width: 48%;
+}
+
+.triangle-container {
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.triangle-logo-icon {
+    background-image: url('../images/triangle.svg');
+    height: 40px;
+    width: 40px;
+}
+
+.gunshow-logo-icon {
+    margin-left: 10px;
+    background-image: url('../images/gunshow-logo.svg');
+    height: 60px;
+    width: 178px;
+}
+
+.custom_h1 {
+    font-family: 'PosterGothicATF';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.5vw;
+    text-align: center;
+    line-height: 2.8125vw;
+    /* White */
+    color: #FFFFFF;
+
+}
+
+.custom_h1 span {
+    font-family: 'PosterGothicATF';
+}
+
+/*.top-title:first-child::nth-letter(3){
+    color:#FFE600;
+}*/
+.yellow {
+    color: #FFE600;
+}
+
+.custom_button {
+    font-size: 1.5vw;
+    padding: 0.73vw 1.04vw !important;
+    border-radius: 4px;
+    font-family: 'ObjektivMk1';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.822vw;
+}
+
+.fees-container {
+    margin: 2.6vw;
+    height: 15vw;
+}
+
+.flat-fees {
+    width: 50%;
+    float: left;
+    text-align: right;
+    border-right: 4px solid #FFE600;
+    padding-top: 1.822vw;
+    padding-right: 1.822vw;
+    padding-bottom: 1.822vw;
+}
+
+.listing-fees {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding-top: 1.822vw;
+    padding-left: 1.822vw;
+}
+.fees-container > .flat-fees > h1 > span.yellow.black-bg{padding : 4px 4px 0px 4px;}
+.bordered-button.info-dark-border:hover,.bordered-button.info-dark-border:focus,.bordered-button.info-dark-border:active{background: #ffffff;}
+.black {
+    color: #333333;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.no-margin {
+    margin: 0px 0px !important;
+}
+
+.black_span {
+    background-color: #333333;
+    color:  #FFE600;
+    font-size: 1.25vw;
+    padding: 0 1vw;
+    height: 2.708vw;
+    width: fit-content;
+    line-height: 2.708vw;
+    margin-top: 0px;
+    margin-bottom: 0.4vw;
+}
+
+.light_span {
+    color: #333333;
+    font-size: 1.875vw;
+    padding: 0 0;
+    height: 2.708vw;
+    width: fit-content;
+    line-height: 2.708vw;
+    margin-top: 0px;
+    margin-bottom: 0.4vw;
+}
+
+.sell-button-container {
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.black-container {
+    background-color: #333333;
+}
+
+.black-container div {
+    padding: 3vw;
+}
+
+.custom_h3 {
+    font-family: 'PosterGothicATF';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25vw;
+    /* identical to box height */
+    text-align: center;
+    /* White */
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0.5vw;
+}
+
+.custom_h2 {
+    font-family: 'PosterGothicATF';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.875vw;
+    /* identical to box height */
+    margin: 0px;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+.about-container {
+    background-color: #EBEBEB;
+}
+
+.about-container div {
+    padding: 4vw 12vw;
+}
+
+.about-container div p {
+    font-family: 'ObjektivMk1';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25vw;
+    line-height: 1.5vw;
+    text-align: left;
+    color: #000000;
+}
+
+
+@media screen and (max-width: 768px) {
+    .top-title {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 70%;
+    }
+
+    .gunshow-logo-icon {
+        height: 30px;
+        width: 89px;
+    }
+
+    .custom_button {
+        font-size: 2vw;
+        padding: 1.5vw 2vw !important;
+        border-radius: 2px;
+
+    }
+
+    .triangle-container {
+        bottom: -10px;
+    }
+
+    .triangle-logo-icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    .fees-container {
+        height: 22.5vw;
+    }
+
+    .black_span {
+        font-size: 1.875vw;
+        padding: 0 2vw;
+        height: 4.062vw;
+        width: fit-content;
+        line-height: 4.062vw;
+    }
+
+    .light_span {
+        font-size: 2.8125vw;
+        line-height: 4.062vw;
+    }
+
+    .sell-button-container {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+    }
+
+    .custom_h1 {
+        font-size: 3.75vw;
+        line-height: 4.21875vw;
+        margin-bottom: 0px;
+    }
+
+    .black-container div {
+        padding: 2vw;
+    }
+
+    .custom_h3 {
+        font-size: 1.875vw;
+    }
+
+    .custom_h2 {
+        font-size: 2.8125vw;
+    }
+
+    .about-container div p {
+        font-size: 1.875vw;
+        line-height: 2.225vw;
+
+    }
+}

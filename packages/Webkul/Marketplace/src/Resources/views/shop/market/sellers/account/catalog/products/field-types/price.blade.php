@@ -1,0 +1,1 @@
+<input type="text" v-validate="'{{$validations}}'" class="form-control" id="{{ $attribute->code }}" name="{{ $attribute->code }}" value="{{  !isset($product[$attribute->code]) ? null : round($product[$attribute->code],2) }}" data-vv-as="&quot;{{ $attribute->admin_name }}&quot;"/>

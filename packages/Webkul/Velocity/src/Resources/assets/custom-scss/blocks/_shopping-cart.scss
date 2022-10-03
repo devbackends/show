@@ -1,0 +1,26 @@
+.cart-item-list {
+    .product-details-content {
+        .product-price span:nth-child(1), .product-price .special-price, .product-price .price-from > span:not(:nth-child(2)), .product-price .heading {
+            font-family: $paragraph;
+            font-size: $font-md !important;
+            display: inline-block;
+            vertical-align: middle;
+            vertical-align: top;
+            font-weight: bold;
+        }
+        
+        .product-price .regular-price {
+            color: $gray;
+            margin-right: 0;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 8px;
+        }
+        .product-price .sticker.sale {
+            display: none;
+        }
+        .product-price {
+            margin-bottom: 8px;
+        }
+    }
+}

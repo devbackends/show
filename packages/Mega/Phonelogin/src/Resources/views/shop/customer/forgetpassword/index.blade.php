@@ -1,0 +1,1 @@
+@include('megaPhoneLogin::shop.customer.forgetpassword.index-velocity')

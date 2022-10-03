@@ -1,0 +1,15 @@
+{
+  "siteTypeID":1,
+  "otherSiteTypeDescription":"e-commerce",
+  "siteSurveyConductedInPerson":true,
+  "merchantAcquisitionTypeID":null,
+  "validIDVerified":true,
+  "inventoryMatchesProductSold":true,
+  "inventoryMatchesProductSoldComments":null,
+  "agreementAccepted":true,
+  "modifyDateTimeUtc":"2020-05-22T11:03:23.3433333",
+  "metadata":{
+    "exchangeId":"ID-0b59d9f8-75bf-4d14-8575-bac1c5460fa6",
+    "timestamp":"2020-05-22T11:03:23.370132Z"
+  }
+}

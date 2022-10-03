@@ -1,0 +1,28 @@
+.filter-attributes-content {
+    margin-left: 0;
+    ul {
+        margin-left: 0;
+    }
+}
+.side-filter {
+    &__title {}
+    &__subtitle {
+        .filter-attributes-title {
+            margin-bottom: 10px;
+        }
+        h4 {
+            margin-bottom: 0;
+        }
+        &-right {
+            margin-top: -5px;
+        }
+    }
+    &__clear-btn {
+        font-size: $font-sm;
+        color: $info;
+        margin-right: 5px;
+        &:hover {
+            color: $info-dark;
+        }
+    }
+}

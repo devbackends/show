@@ -1,0 +1,223 @@
+.event-product {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    flex-direction: column;
+
+    &__hero {
+        //min-height: 220px;
+        background-size: cover !important;
+        background-position: center center i !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 4rem 0 2rem;
+        color: $color-white;
+
+        position: -webkit-sticky i !important;
+        position: sticky !important;
+        top: 66px;
+        width: 100%;
+        z-index: 3;
+        
+        @include media-breakpoint-down(md) {
+            top: 0;
+            position: relative !important;
+        }
+
+        transition: all 200ms ease-in-out;
+
+        &-content {
+            .badge {
+                margin-right: 0.5rem;
+            }
+        }
+        &-title {
+            margin-bottom: 0;
+            &-container {
+                position: relative;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }          
+        }
+        &-category {
+            height: auto;
+            opacity: 1;
+            &-name {
+                @extend %font-paragraph-big-bold;
+                margin-bottom: 0;
+                display: inline-block;
+            }
+        }
+        &-by {
+            @extend %font-paragraph-big-bold;
+            margin-bottom: 0;
+            &--sticky {
+                display: none;
+                height: 0;
+                opacity: 0;
+            }
+        }
+        &-wishlink {
+            display: inline-flex;
+            vertical-align: middle;
+            i {
+                font-size: 1.5rem;
+                color: $color-white;
+            }
+        }
+    }
+    &__body {
+        padding: 2.5rem 0;
+        width: 100%;
+    }
+    &__description {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-gray-light;
+        margin-bottom: 1.5rem;
+        &-title {
+            @extend %font-paragraph-big-bold;
+        }
+    }
+    &__info {
+        i {
+            font-size: 1.75rem;
+            width: 2rem;
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+            li {}
+        }
+        &-item {
+            margin-bottom: 1.5rem;
+            &-title {
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__booking-info {
+        width: 100%;
+        &-price {
+            @extend %font-paragraph-xl-bold;
+            color: $color-info-dark;
+            &-unit {
+                font-size: $base-font-size;
+                font-weight: normal;
+            }
+        }
+        &-title {
+            font-weight: bold;
+        }
+    }
+    &__ticket, &__date, &__rental {
+        background: $color-gray-lighter;
+        padding: 1rem 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+        .row {
+            margin-right: -0.5rem;
+            margin-left: -0.5rem;
+        }
+        [class^=col] {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        &-title {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        &-list {
+            overflow-y: auto;
+            padding-right: 0.5rem;
+            margin-bottom: 1rem;
+            @include media-breakpoint-down(md) {
+                max-height: auto;
+            }
+        }
+        &-description {
+            margin-bottom: 0;
+        }
+        &-price {
+            font-weight: bold;
+            color: $color-info-dark;
+            margin-bottom: 1rem;
+            span {
+                font-size: $font-xl;
+            }
+        }
+    }
+    &__ticket {
+        padding: 0 1rem;
+        &--not-available {
+            .btn i {
+                font-size: 1.25rem;
+            }
+        }
+        &-icon {
+            border-right: 1px dashed $color-gray;
+            padding: 1rem 1rem 1rem 0.5rem !important;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 1.5rem;
+                color: $color-gray;
+            }
+        }
+        &-content {
+            padding: 1rem 0;
+        }
+    }
+    &__rental {
+        &-add-to-cart {
+            padding-top: 1.5rem;
+        }
+    }
+    &__date-list {
+        max-height: 300px;
+        margin-bottom: 1.5rem;
+    }
+    @include media-breakpoint-up(md) {
+        &--sticky {
+            .event-product__hero {
+                padding: 1rem 0;
+                transition: all 200ms ease-in-out;
+            }
+            .event-product__description, .event-product__booking-info {
+                padding-top: 92px;
+            }
+            .event-product__hero-title {
+                display: inline-block;
+                vertical-align: bottom;
+                font-size: $h3-font-size;
+                span {
+                    vertical-align: top;
+                }
+            }
+            .event-product__hero-by {
+                display: inline-block;
+                margin-left: 0.75rem;
+                font-size: $base-font-size;
+                vertical-align: bottom;
+            }
+            .event-product__hero-wishlink {
+                position: absolute;
+                right: 0;
+                top: 0.25rem;
+            }
+            .event-product__hero-category {
+                height: 0;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+}

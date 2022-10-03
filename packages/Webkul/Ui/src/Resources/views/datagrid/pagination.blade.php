@@ -1,0 +1,3 @@
+<div>
+    {{ $results->links() }}
+</div>

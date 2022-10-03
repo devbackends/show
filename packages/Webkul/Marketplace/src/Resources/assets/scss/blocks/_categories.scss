@@ -1,0 +1,16 @@
+.other-categories {
+    background: $color-gray-extralight;
+    &__item {
+        display: block;
+        img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: 0.25rem;
+        }
+        &-title {
+            font-weight: bold;
+        }
+    }
+}

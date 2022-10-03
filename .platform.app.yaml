@@ -1,0 +1,276 @@
+# This file describes an application. You can have multiple applications
+# in the same project.
+
+# The name of this app. Must be unique within a project.
+name: app
+
+# The type of the application to build.
+
+type: 'php:8.0'
+build:
+    flavor: none
+
+runtime:
+    extensions:
+        - redis
+
+# The hooks that will be performed when the package is deployed.
+hooks:
+    build: |
+        set -e
+        curl -sS https://platform.sh/cli/installer | php
+        composer clear-cache && composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
+        composer dump-autoload
+        ln -s /app/storage/app/public /app/public/storage
+        rm -rf public/themes/* && rm -rf public/vendor/*
+        rm -rf /resources/views/* && rm -rf /resources/themes/*
+        rm -rf bootstrap/cache/*
+        rm -rf storage/app/db-blade-compiler/views/*
+    deploy: |
+        set -e
+        php artisan package:discover
+        php artisan migrate
+        php artisan config:cache
+        php artisan route:cache
+        php artisan vendor:publish --all
+        php artisan view:clear
+        php artisan calculate-attribute-options-products-amount all
+        php artisan elastic:index
+
+
+
+# The relationships of the application with services or other applications.
+# The left-hand side is the name of the relationship as it will be exposed
+# to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
+# side is in the form `<service name>:<endpoint name>`.
+relationships:
+    database: "db:mysql"
+    rediscache: "cache:redis"
+    essearch: "searchelastic:elasticsearch"
+
+# The size of the persistent disk of the application (in MB).
+disk: 2048
+
+# The mounts that will be performed when the package is deployed.
+mounts:
+    "public/themes":
+        source: local
+        source_path: "themes"
+    "public/vendor":
+        source: local
+        source_path: "vendor"
+    "storage/app/public":
+        source: local
+        source_path: "public"
+    "storage/app/db-blade-compiler":
+        source: local
+        source_path: "db-blade-compiler"
+    "storage/framework/views":
+        source: local
+        source_path: "views"
+    "storage/framework/sessions":
+        source: local
+        source_path: "sessions"
+    "storage/framework/cache":
+        source: local
+        source_path: "cache"
+    "storage/logs":
+        source: local
+        source_path: "logs"
+    "bootstrap/cache":
+        source: local
+        source_path: "cache"
+    "/.config":
+        source: local
+        source_path: "config"
+    "resources/themes":
+        source: local
+        source_path: "themes"
+    "resources/views":
+        source: local
+        source_path: "views_vendor"
+    "storage/app/licenses":
+        source: local
+        source_path: "licenses"
+    "storage/app/certs":
+        source: local
+        source_path: "certs"
+    "storage/debugbar":
+        source: local
+        source_path: "debugbar"
+    "sessions":
+        source: local
+        source_path: sessions
+
+
+# The configuration of app when it is exposed to the web.
+web:
+    locations:
+        "/":
+            root: "public"
+            index:
+                - index.php
+            allow: true
+            passthru: "/index.php"
+            headers:
+                Content-Security-Policy: default-src 'self'
+                X-Frame-Options: SAMEORIGIN
+                X-Content-Type-Options: nosniff
+                Referrer-Policy: origin
+                Permissions-Policy: "geolocation=(),midi=(),sync-xhr=(),microphone=(),camera=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()"
+
+variables:
+    php:
+        max_execution_time: "1800"
+        memory_limit: "1024M"
+        session.save_path: "/app/sessions"
+    env:
+        APP_NAME: "2agun"
+        APP_VERSION: "1.1.0"
+        APP_KEY: "base64:ShghmSOdBT1qVVJQTv3sYi1hDKieRvsUdlTx6zdkjbc="
+        APP_TIMEZONE: "America/Chicago"
+        APP_LOCALE: "en"
+        LOG_CHANNEL: "stack"
+        APP_CURRENCY: "USD"
+        BROADCAST_DRIVER: "log"
+        SESSION_DRIVER: "file"
+        SESSION_LIFETIME: "120"
+        QUEUE_DRIVER: "sync"
+        CLEARENT_API_URL: "https://gateway.clearent.net"
+        CLEARENT_API_PRIVATE_KEY: "c595781ad5184e14ba1b75f043c01b5b"
+        CLEARENT_API_PUBLIC_KEY: "307a301406072a8648ce3d020106092b240303020801010c0362000419dc42f1b7bfd9d1d11958ca3418edbb96621af3ece3de1f9df541d1a6bc4d8b232153e1224abed0a020f84551f6e06e3e470e408e53c2bae85926d4f213f092df5ab2874dfd001dae18441c844ad543fac12328f9cfd64e3aae85385dd1b6c6"
+        CLEARENT_API_SOFTWARE_TYPE: "Devvly"
+        CLEARENT_API_SOFTWARE_VERSION: "1.0"
+        FILESYSTEM_DRIVER: "wassabi_public"
+        SHOP_MAIL_FROM: "info@2agunshow.com"
+        ADMIN_MAIL_TO: "info@2agunshow.com"
+        DISTRIBUTOR_IMPORT_URL: "ftp.rsrgroup.com"
+        DISTRIBUTOR_IMPORT_USER: "44929"
+        DISTRIBUTOR_IMPORT_PASSWORD: "etkOryW6"
+        ELASTICSEARCH_ENABLED: true
+        IS_WHALUT: false
+        FLUID_API_URL: "https://app.fluidpay.com"
+        MAILERSEND_API_KEY: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjc0Y2E5ZGYyYzc0NjNiNzE5MDNiMDJmYzg1MzA4MmVjZGIxZmEwM2RkNDczY2ZhZDFiNDk2Y2UxZWFmZGI4MDQ5NjU5NzY2MWRiYTUzZjEiLCJpYXQiOjE2NDQ4MzQ3ODYuNjE3ODY4LCJuYmYiOjE2NDQ4MzQ3ODYuNjE3ODcyLCJleHAiOjQ4MDA1MDgzODYuNjEyODAyLCJzdWIiOiI5NDk3Iiwic2NvcGVzIjpbImVtYWlsX2Z1bGwiLCJkb21haW5zX2Z1bGwiLCJhY3Rpdml0eV9mdWxsIiwiYW5hbHl0aWNzX2Z1bGwiLCJ0b2tlbnNfZnVsbCIsIndlYmhvb2tzX2Z1bGwiLCJ0ZW1wbGF0ZXNfZnVsbCIsInN1cHByZXNzaW9uc19mdWxsIl19.LpHxv0OfppIw_at-njTKs--sij8Z1K6Gjr4fyDfHK_4WD2oq_LcWes3OJjrUnzazrfnmLVC_LTgYfHETAT51NQhiNGw1gMbPZjP_cbcN1ehqKi2Xnam80PcScjdK02KnNaBfW-ole_HW_3XdZoFK4xuINBF5IBlL14YLU3WclRXYKqcskLpfoNqWm5a1qZgLi_4vq2FZBASN2qwoSAOBnzTaXwMbZaderB_vtVI_QCwf4uFhmy4O2dtHfeV4jvrJzp62g6WAK6OlSaVmNeLolmGA5bio16RPGDpCsAnOpUB2MQL4LDyMz8hL7NjVW7M0oMzpiM4HbmC-yESm6OV0f4_leKKto-bILRVBXQYNM5SPjcxtaU_zzMkKKgplc4iF_lk6aJxl4mWlnyuzl3A6V8xIdq3iRZPaOG_8N6t6s8gFVBLOiJ5xF9t-Kwr9H7vQICeyv1iKKSswQxIVsGuyf7-2EpEDl5lHLxDyfqIJ3Jv7sjlVcF65A0dlNIi2iWNoivs2XEbDsIDIHBwibLyNJs1r6QBQniQAY9grSaOXsGfyWEPdBPlb9MMr--QGcqIRoCWpbF3ZQGB2nGalRQoo-ev-bpAqR8Cj-2OWFcjNTA2BtzuOBNQCvmDhJPa-7pGZoLkxcKu3dQzG8bgzxMLbVwIn5hJyvecKasEqWpLGILk"
+        MAIL_MAILER: "smtp"
+        MAIL_HOST: "smtp.mailersend.net"
+        PLATFORM_SMTP_HOST: "smtp.mailersend.net"
+        MAIL_PORT: 587
+        MAIL_USERNAME: "MS_AlWzQO@2agunshow.com"
+        MAIL_PASSWORD: "UFit2xYupo6x8YPQ"
+        MAIL_FROM_ADDRESS: "info@2agunshow.com"
+        MAIL_FROM_NAME: "2AGUNSHOW"
+        MAIL_DRIVER: "smtp"
+        MAIL_ENCRYPTION: "tls"
+
+crons:
+    run_scheduler:
+        # The cron task will run every minute
+        spec: '*/1 * * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+            php artisan schedule:run
+            fi
+
+    # Run update-inventory
+    update_inventory:
+        spec: '*/30 * * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+            php artisan update-inventory
+            fi
+
+    import_distribute:
+        # The cron task will run weekly every 7 days
+        # sunday at 00:00 am
+        spec: '0 0 * * 0'
+        cmd: |
+                php artisan import-distribute
+
+    update_distribute:
+        # The cron task will run weekly every 7 days
+        # sunday at 3:00am
+        spec: '0 3 * * 0'
+        cmd: |
+            php artisan update-rsr-distribute
+
+    gun_show_trader:
+        # The cron task will run weekly every 7 days
+        # Thur at 3am
+        spec: '0 3 * * 4'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan scraper gunshowtrader
+            fi
+
+    nra_firearm_training:
+        # The cron task will run weekly every 7 days
+        # Thur at 3am
+        spec: '0 3 * * 4'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan scraper nrafirearmtraining
+            fi
+
+    nra_gun_show:
+        # The cron task will run weekly every 7 days
+        # Wed at 3am
+        spec: '0 3 * * 3'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan scraper nragunshow
+            fi
+
+    nra_gun_range:
+        # The cron task will run weekly every 30 days
+        # 1am on 2nd of month
+        spec: '0 1 2 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan scraper nragunrange
+            fi
+
+    nra_clubs:
+        # The cron task will run weekly every 30 days
+        # 2am on 2nd of month
+        spec: '0 2 2 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan scraper nraclubs
+            fi
+
+    delete_rsr_products:
+        # The cron task will run every 24 hours.
+        # daily at 1am
+        spec: '0 1 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan rsr-delete-products
+            fi
+
+    add_rsr_products_restrictions:
+        # The cron task will run every once monthly.
+        spec: '0 3 1 * *'
+        cmd: php artisan add-product-restrictions
+
+    add_rsr_products_warnings:
+        # The cron task will run every once monthly.
+        spec: '0 3 1 * *'
+        cmd: php artisan add-product-warnings
+
+    backup:
+        # Run nightly backups
+        # Nightly at 4am
+        spec: '0 4 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                platform backup:create --yes --no-wait
+            fi
+
+    backup_wasabi:
+        # Run nightly db backups to wasabi
+        spec: '0 5 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                php artisan backup
+            fi
+

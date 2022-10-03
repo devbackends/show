@@ -1,0 +1,19 @@
+.btn {
+    @extend %paragraph-bold;
+    text-transform: uppercase;
+    height: $form-input-height;
+    padding: 9px 20px;
+    &-primary {
+        color: $white;
+    }
+}
+
+[class^="btn-outline"] {
+    border-width: 2px;
+}
+
+.btn-outline-primary {
+    &:hover {
+        color: $white;
+    }
+}

@@ -1,0 +1,77 @@
+.tree-container {
+    .tree-item {
+        padding-left: 30px;
+        display: inline-block;
+        margin-top: 10px;
+        width: 100%;
+        position: relative;
+        &.has-children {
+            &>.fa-chevron-down {
+                display: block;
+            }
+        }
+        .fa-chevron-down {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            display: none;
+        }
+        .fa-folder {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            display: none;
+        }
+        > .tree-item {
+            display: none;
+        }
+
+        &.active {
+            input[type="checkbox"] {
+                margin-top: 0;
+                margin-left: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        &.active > .tree-item {
+            display: inline-block;
+        }
+
+        .checkbox {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .radio {
+            margin: 0;
+            display: inline-block;
+        }
+
+        .expand-icon {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            background-image: url("/images/Expand-Light.svg");
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+
+        .folder-icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        &.active {
+            > .expand-icon {
+                background-image: url("/images/Expand-Light-On.svg");
+            }
+        }
+    }
+
+    > .tree-item {
+        padding-left: 0;
+    }
+}

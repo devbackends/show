@@ -1,0 +1,154 @@
+.card {
+  $this: &;
+
+  // user account address card
+  &--address {
+    border-color: $color-gray;
+
+    #{$this}-body {
+      padding: 19px 23px;
+    }
+
+    #{$this}-title {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+
+    #{$this}-link {
+      font-size: .875rem;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // user account review card
+  &--review {
+    border: 0 none;
+    margin-bottom: 30px;
+
+    @media only screen and (min-width:576px) {
+      flex-direction: row;
+    }
+
+    #{$this}-img {
+      margin-bottom: 20px;
+      border-radius: 0;
+
+      @media only screen and (min-width:576px) {
+        flex: 0 0 90px;
+        width: 90px;
+        margin-right: 19px;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    #{$this}-body {
+      padding: 0;
+
+      .rate {
+        margin-top: 3px;
+        margin-bottom: 6px;
+      }
+    }
+
+    #{$this}-action {
+      float: right;
+    }
+
+    #{$this}-link {
+      color: inherit;
+      transition: $transition;
+
+      &:hover,
+      &:focus {
+        color: $color-info-dark;
+      }
+
+      & + #{$this}-link {
+        margin-left: 15px;
+
+        @media only screen and (min-width:992px) {
+          margin-left: 63px;
+        }
+      }
+
+      i {
+        margin-right: 6px;
+        font-size: 18px;
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    #{$this}-title {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+
+    #{$this}-text {
+      h5 {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.small-card-container {
+  border: 1px solid $color-gray-light;
+  padding: 0.75rem;
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
+  .product-image-container {
+    .product-image {
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.category-card {
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+  background-color: $color-gray-darker;
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+  &__name {
+    position: absolute;
+    z-index: 1;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1rem;
+    color: $color-white;
+    font-weight: bold;
+    font-size: $h3-font-size;
+    @include media-breakpoint-up(lg) {
+      font-size: $h2-font-size;
+    }
+    margin-bottom: 0;
+  }
+}

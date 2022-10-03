@@ -1,0 +1,112 @@
+.dashboard {
+    &__tips {
+        border: 1px solid $color-gray-light;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        position: relative;
+        &-title {
+            h2,
+            h3 {
+                color: $color-info-dark;
+            }
+        }
+        &-close {
+            font-size: $h3-font-size;
+            color: $color-gray-dark;
+            position: absolute;
+            right: 32px;
+            top: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $color-gray-darker;
+            }
+        }
+        &-content {
+            .nav-tabs {
+                border-bottom: 1px solid $color-gray-light;
+                .nav-item {
+                    a.nav-link {
+                        border-radius: 0;
+                        font-weight: 700;
+                        color: $color-gray-dark;
+                        border: 1px solid transparent;
+                        border-bottom: none;
+                        padding: 1rem !important;
+                        &.disabled {
+                            opacity: 0.5;
+                        }
+                        &.active {
+                            background: $color-white;
+                            color: $color-gray-darker;
+                            border: 1px solid $color-gray-light;
+                            border-bottom: none;
+                            border-radius: 4px 4px 0 0;
+                        }
+                        .fa-check {
+                            display: none;
+                        }
+                        &__success {
+                            color: $color-success;
+                            &.active {
+                                color: $color-success;
+                            }
+                            .fa-check {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                padding: 30px 0 0;
+            }
+            &-icon {
+                border: 2px solid $color-primary;
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                i {
+                    font-size: 64px;
+                }
+            }
+            &-big {
+                @extend %font-paragraph-big;
+                &-gray {
+                    font-size: $base-font-size;
+                    color: $color-black;
+                }
+            }
+        }
+        &-copy-url {
+            &--text {
+                display: none;
+            }
+            &--message {
+                display: none;
+            }
+            .fa-copy, .fa-check {
+                display: none;
+            }
+            &.btn-primary {
+                .dashboard__tips-copy-url--text {
+                    display: block;
+                }
+                .fa-copy {
+                    display: block;
+                }
+            }
+            &.btn-success {
+                .dashboard__tips-copy-url--message {
+                    display: block;
+                }
+                .fa-check {
+                    display: block;
+                }
+            }
+        }
+        #storeUrl {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.steps {
+    margin-bottom: 2rem;
+}
+.step-item {
+    display: inline-block;
+    &:first-child {
+        &::before {
+            content: "";
+            margin: 0;
+        }
+    }
+    &::before {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        content: "\f054";
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1rem;
+        color: $color-gray;
+    }
+    a {
+        color: $color-gray;
+        &:hover, &:focus {
+            text-decoration: none;
+            color: $color-gray;
+        }
+    }
+    &--disabled {
+    }
+    &--active {
+        a {
+            color: $color-black;
+            background: $color-gray-lighter;
+            &:hover, &:focus {
+                color: $color-black;
+                background: $color-gray-lighter;
+            }
+        }
+        &::before {
+            color: $color-black;
+        }
+    }
+    &--success {
+        a {
+            color: $color-success;
+            background: transparent;
+            &:hover, &:focus {
+                color: $color-success-dark;
+                background: transparent;
+            }
+        }
+        &::before {
+            color: $color-success;
+        }
+    }
+}

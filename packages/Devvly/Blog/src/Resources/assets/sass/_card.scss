@@ -1,0 +1,44 @@
+.card {
+  $this: &;
+
+  // user account address card
+  &--address {
+    border-color: $color-gray;
+
+    #{$this}-body {
+      padding: 19px 23px;
+    }
+
+    #{$this}-title {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: .5rem;
+    }
+
+    #{$this}-link {
+      font-size: .875rem;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.small-card-container {
+  border: 1px solid $color-gray-light;
+  padding: 0.75rem;
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
+  .post-image-container {
+    .post-image {
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}

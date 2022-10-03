@@ -1,0 +1,152 @@
+// search form for the header
+#search-form {
+  width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    max-width: 870px;
+    margin: 11px auto;
+    padding: 0 11px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-left: 120px;
+  }
+
+  .header-search-container {
+    margin: 0;
+    width: 100%;
+
+  }
+
+  input,
+  select {
+    font-size: $h6-font-size !important;
+    background: none;
+    color: $color-gray-lighter;
+
+    @include placeholder {
+      font-family: inherit;
+    }
+  }
+
+  .geolocation-container {
+    position: relative;
+    margin-bottom: 15px;
+
+    @media only screen and (min-width: 992px) {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      position: absolute;
+      top: 13px;
+      right: 12px;
+      font-family: "Font Awesome 5 Pro";
+      font-size: 18px;
+      line-height: 1;
+      color: $color-white;
+      content: '\f3c5';
+    }
+
+    input {
+      position: relative;
+      z-index: 1;
+      padding-right: 35px;
+
+      @media only screen and (min-width: 992px) {
+        border-radius: 4px 0px 0px 4px;
+        border-right: 0 none;
+      }
+
+      &:focus + .link {
+        display: flex;
+      }
+    }
+
+    .link {
+      display: none;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      margin-top: 4px;
+      border-radius: $border-radius;
+      padding: 11px;
+      background-color: $color-gray-lighter;
+      color: $color-gray-dark;
+      line-height: 1.2em;
+
+      &:hover,
+      &:focus {
+        background-color: $color-gray-light;
+      }
+
+      i {
+        margin-right: 5px;
+        font-size: 18px;
+        color: $color-info-dark;
+      }
+    }
+  }
+
+  .selectdiv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @media only screen and (min-width: 992px) {
+      width: 183px;
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      background-color: transparent;
+
+      @media only screen and (min-width: 992px) {
+        border-radius: 0;
+        border-right: 0 none;
+      }
+    }
+
+    .select-icon {
+      right: 18px;
+      font-size: 18px;
+      font-weight: 800;
+      color: $color-gray-dark;
+    }
+  }
+
+  .full-width.col-md-9 {
+    display: flex;
+    align-items: center;
+
+    input {
+      border-radius: 4px 0 0 4px;
+
+      @media only screen and (min-width: 992px) {
+        border-radius: 0;
+      }
+    }
+
+    button {
+      height: 100%;
+      border-radius: 0px 4px 4px 0px;
+      background: $color-gray-lighter;
+      transition: $transition;
+
+      &:hover {
+        color: $color-info;
+      }
+    }
+  }
+
+  .btn-toolbar {
+    margin: 0;
+
+    &::before,
+    &:after {
+      display: none;
+    }
+  }
+}

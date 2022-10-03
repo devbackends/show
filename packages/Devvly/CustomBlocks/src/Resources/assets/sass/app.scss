@@ -1,0 +1,12 @@
+@import "gutenberg";
+@import "container/editor";
+@import "row/editor";
+@import "row/style";
+.guttenberg-img-full{
+    img{
+        width: 100%;
+    }
+}
+.pb-30{
+    padding-bottom: 30px !important;
+}

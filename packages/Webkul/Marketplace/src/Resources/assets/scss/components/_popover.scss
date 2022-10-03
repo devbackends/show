@@ -1,0 +1,11 @@
+.popover {
+    box-shadow: $box-shadow;
+    border: 1px solid $color-gray-light;
+    &-body {
+        padding: 1.5rem;
+        p {
+            font-size: $font-md;
+            margin-bottom: 0;
+        }
+    }
+}

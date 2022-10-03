@@ -1,0 +1,25 @@
+{
+    "name": "devvly/blog",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "devvly",
+            "email": "info@devvly.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\Blog\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\Blog\\Providers\\BlogServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

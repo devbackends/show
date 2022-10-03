@@ -1,0 +1,77 @@
+Index: src/Modules/Auth/Auth.php
+<+>UTF-8
+===================================================================
+diff --git a/src/Modules/Auth/Auth.php b/src/Modules/Auth/Auth.php
+--- a/src/Modules/Auth/Auth.php	(revision beee0473628955f9bb9b867b47354b2354517baa)
++++ b/src/Modules/Auth/Auth.php	(date 1614604393598)
+@@ -16,7 +16,7 @@
+         if (phpb_in_module('auth')) {
+             if ($action === 'login' && isset($_POST['username']) && isset($_POST['password'])) {
+                 if ($_POST['username'] === phpb_config('auth.username') && $_POST['password'] === phpb_config('auth.password')) {
+-                    $_SESSION['phpb_logged_in'] = true;
++                    session()->put('phpb_logged_in', true);
+                     phpb_redirect(phpb_url('website_manager'));
+                 } else {
+                     phpb_redirect(phpb_url('website_manager'), [
+@@ -25,7 +25,7 @@
+                     ]);
+                 }
+             } elseif ($action === 'logout') {
+-                unset($_SESSION['phpb_logged_in']);
++                session()->remove('phpb_logged_in');
+                 phpb_redirect(phpb_url('website_manager'));
+             }
+         }
+@@ -38,7 +38,7 @@
+      */
+     public function isAuthenticated()
+     {
+-        return isset($_SESSION['phpb_logged_in']);
++        return session()->has('phpb_logged_in');
+     }
+
+     /**
+Index: src/PHPageBuilder.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/PHPageBuilder.php b/src/PHPageBuilder.php
+--- a/src/PHPageBuilder.php	(revision beee0473628955f9bb9b867b47354b2354517baa)
++++ b/src/PHPageBuilder.php	(date 1614604275246)
+@@ -52,15 +52,11 @@
+             return;
+         }
+
+-        if (session_status() === PHP_SESSION_NONE) {
+-            session_start();
+-        }
+-
+         // if flash session data is set, set global session flash data and remove data
+-        if (isset($_SESSION['phpb_flash'])) {
++        if (session()->has('phpb_flash')) {
+             global $phpb_flash;
+-            $phpb_flash = $_SESSION['phpb_flash'];
+-            unset($_SESSION['phpb_flash']);
++            $phpb_flash = session()->get('phpb_flash');
++            session()->remove('phpb_flash');
+         }
+
+         $this->setConfig($config);
+Index: src/Core/helpers.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Core/helpers.php b/src/Core/helpers.php
+--- a/src/Core/helpers.php	(revision beee0473628955f9bb9b867b47354b2354517baa)
++++ b/src/Core/helpers.php	(date 1614604275233)
+@@ -365,7 +365,7 @@
+     function phpb_redirect($url, $flashData = [])
+     {
+         if (! empty($flashData)) {
+-            $_SESSION["phpb_flash"] = $flashData;
++            session()->put('phpb_flash', $flashData);
+         }
+
+         header('Location: ' . $url);

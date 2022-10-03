@@ -1,0 +1,18 @@
+// tabs navigation
+.nav-tabs {
+  border-bottom-color: $color-gray-light;
+
+  .nav-link {
+    border-radius: 0;
+    border: 0 none;
+    border-bottom: 2px solid transparent;
+    padding: 7px 18px;
+    font-weight: 700;
+    color: $color-gray;
+
+    &.active {
+      border-bottom-color: $color-gray-darker;
+      color: $color-gray-darker;
+    }
+  }
+}

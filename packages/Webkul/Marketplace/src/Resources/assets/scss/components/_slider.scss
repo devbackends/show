@@ -1,0 +1,137 @@
+.VueCarousel-navigation {
+    .VueCarousel-navigation-button {
+        font-size: 0;
+        position: relative;
+        height: 100%;
+        width: 30px;
+        &:focus {
+            outline: none !important;
+        }
+        &::after {
+            font-family: "Font Awesome 5 Pro";
+            font-size: 32px;
+            font-weight: 400;
+            position: absolute;
+            top: 50%;
+            margin-top: -24px;
+            width: 30px;
+            height: 48px;
+            color: $black;
+        }
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    .VueCarousel-navigation-prev {
+        &::after {
+            content: "\f053";
+            right: 0;
+        }
+    }
+    .VueCarousel-navigation-next {
+        &::after {
+            content: "\f054";
+            right: 0;
+        }
+    }
+}
+
+.VueCarousel-pagination {
+    .VueCarousel-dot-container {
+        margin-top: 0 !important;
+        .VueCarousel-dot {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+
+.vue-slider {
+
+    .vue-slider-dot {
+        background: $color-primary-darker;
+        border-radius: 50%;
+        .vue-slider-dot-tooltip-text {
+            padding: 5px 8px;
+        }
+        .vue-slider-dot-tooltip-inner {
+            border-radius: 6px !important;
+        }
+    }
+}
+
+.product-list__filter {
+    .vue-slider {
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+}
+
+
+.slick-slider {
+    .slick-list {
+        .slick-track {
+            display: flex;
+            align-items: stretch;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            .community__item {
+                &.slick-slide {
+                    opacity: 0.6;
+                    transform: scale(1);
+                    transition: all 200ms ease;
+                    transition-delay: 0s;
+                }
+                &.slick-center {
+                    opacity: 1;
+                    transform: scale(1.1);
+                    z-index: 9;
+                    transition: all 500ms ease;
+                    transition-delay: 0.5s;
+                }
+            }
+        }
+    }
+    &.new-sellers-slider {
+
+    }
+    .slick-arrow {
+        height: auto;
+        width: auto;
+        &::before {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $color-gray-darker;
+            padding: 0.5rem;
+        }
+        &.slick-prev {
+            left: 0;
+            z-index: 9;
+            @include media-breakpoint-up(md) {
+                left: -40px;
+            }
+            &::before {
+                content: "\f053";
+            }
+        }
+        &.slick-next {
+            right: 0;
+            z-index: 9;
+            @include media-breakpoint-up(md) {
+                right: -40px;
+            }
+            &::before {
+                content: "\f054";
+            }
+        }
+    }
+}
+
+.new-sellers {
+    .slick-slide {
+        &:focus {
+            outline: 0 !important;
+        }
+    }
+}

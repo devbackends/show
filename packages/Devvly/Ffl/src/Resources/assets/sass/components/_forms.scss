@@ -1,0 +1,153 @@
+.radio-button {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-right: 15px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__input {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 5px;
+        input {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+        }
+        input:checked + label {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: $secondary;
+                border-radius: 50%;
+                top: 5px;
+                left: 5px;
+            }
+        }
+        label {
+            border: 1px solid $gray-light;
+            background: $gray-lighter;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            position: relative;
+            margin: 0;
+            pointer-events: none;
+        }
+    }
+    &__label {
+        display: inline-block;
+        vertical-align: top;
+        font-family: $objektive;
+        font-size: $font-md;
+        font-weight: $objektive-regular;
+    }
+}
+
+.control-error {
+    color: $secondary;
+}
+
+.has-error {
+    .form-control,
+    &.form-control,
+    .input-group-text {
+        border-color: $secondary;
+    }
+}
+
+.form-section {
+    margin-top: 30px;
+    &__title {
+        display: inline-block;
+    }
+    &__icon {
+        display: inline-block;
+        color: $info-dark;
+        font-size: $font-lg;
+        margin-left: 5px;
+        &:hover {
+            color: $info;
+        }
+    }
+    &__help-text {
+        color: $gray;
+    }
+}
+
+.form-field {
+    &__step-comments {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid $gray-light;
+    }
+}
+
+/* Upload file field */
+
+.upload-container {
+    width: 100%;
+    padding: 30px;
+    border: 1px dashed $gray;
+    background: $white;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.upload-container:hover {
+    background-color: $gray-lighter;
+}
+
+.onboarding-upload-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    /* identical to box height */
+    text-align: center;
+}
+
+.custom_upload {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    left: 15px;
+    right: 15px;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+}
+
+span.upload-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #a1887f;
+}
+
+.onboarding-upload-button {
+    border: 2px solid #795548;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 7px 15px;
+}
+
+.onboarding-upload-button-text {
+    padding: 7px 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    /* identical to box height */
+    text-align: center;
+    /* Brown 500 */
+    color: #795548;
+}
+
+/* END Upload file field */

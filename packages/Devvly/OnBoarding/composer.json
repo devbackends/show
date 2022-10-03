@@ -1,0 +1,25 @@
+{
+    "name": "devvly/onboarding",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "devvly",
+            "email": "info@devvly.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\OnBoarding\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\OnBoarding\\Providers\\OnBoardingServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

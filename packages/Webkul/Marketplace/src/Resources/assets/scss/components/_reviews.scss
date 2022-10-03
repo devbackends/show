@@ -1,0 +1,12 @@
+.reviews {
+    .review {
+        margin-bottom: 15px;
+        .message {}
+        .reviewer-details {
+            font-size: $h6-font-size;
+            .by {
+                color: $color-gray;
+            }
+        }
+    }
+}

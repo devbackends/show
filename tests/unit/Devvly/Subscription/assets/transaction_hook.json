@@ -1,0 +1,46 @@
+{
+  "code":"200",
+  "status":"success",
+  "exchange-id":"ID-clearent-cre-2-024d810c-1657-46bb-a34d-00f5d6c4fd26",
+  "links":[
+    {
+      "rel":"transaction",
+      "href":"/rest/v2/transactions?id=4069087",
+      "id":"4069087"
+    }
+  ],
+  "payload": {
+    "transaction": {
+      "amount":"12.22",
+      "id":"4069087",
+      "type":"SALE",
+      "result":"APPROVED",
+      "card":"XXXXXXXXXXXX1111",
+      "authorization-code":"TAS853",
+      "batch-string-id":"121",
+      "order-id":"plan_fb1a9985-b8ca-445e-ac12-964dc3ba1363",
+      "customer-id":"cust_01cd07a0-8b30-4a7a-861f-e7a406d7ba8e",
+      "display-message":"Transaction approved",
+      "result-code":"000",
+      "exp-date":"1220",
+      "software-type":"Clearent Recurring Engine",
+      "last-four":"1111",
+      "merchant-id":"942539124821",
+      "terminal-id":"10011111"
+    },
+    "payloadType":"transactionToken",
+    "tokenResponse":{
+      "token-id":"1100004955088071111",
+      "times-used":"0",
+      "status":"Active",
+      "created":"2020-05-01T14:31:12.464Z",
+      "updated":"2020-05-01T14:31:12.484Z",
+      "exp-date":"1220",
+      "last-four-digits":"1111",
+      "card-type":"VISA",
+      "merchant-id":"942539124821",
+      "token-status":"Open"
+    }
+  },
+  "signature":"306402306b7cc045a3c5741e9ad0e8580954868a2766ddb00bc72efe239cf6e7e0e06d847c921dd2d0cba7d9851b325f632e962f023038bd64fb62fafe76f0fbcf05d268d04b80d64b761eeea4937c78b0e70b885808523fa4b9fcfc4b4e713f1dd3d7b0692a"
+}

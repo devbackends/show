@@ -1,0 +1,116 @@
+#category-menu-header {
+  background: url(../images/bg-header.png) 50% 0 / cover no-repeat;
+  z-index: $z-index-category-menu-header;
+  @media only screen and (min-width: 992px) {
+    border-top: 1px solid $color-gray-darker;
+    background-position: 50% -98px;
+    background-size: auto;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    background-size: 100% auto;
+  }
+
+  // become a seller link
+  .link {
+    display: none;
+    margin-right: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    color: $color-primary;
+    transition: $transition;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary;
+      color: $color-gray-darker;
+      text-decoration: none;
+    }
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+}
+
+.main-content-wrapper .main-category {
+  margin-right: 30px;
+  border-right: 1px solid $color-gray-darker;
+  display: none;
+  align-items: center;
+  padding: 9px 30px 8px 24px;
+  background: transparent;
+  color: $color-white;
+
+  @media only screen and (min-width: 992px) {
+    display: flex;
+  }
+}
+
+
+
+.main-category {
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  i {
+    margin-right: 9px;
+    font-size: 18px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+// secondary navigation
+.main-content-wrapper .content-list {
+  &.right {
+    display: none;
+    flex: 1 auto;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  ul {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5em;
+
+    a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: 700;
+      color: $color-gray-light;
+      transition: $transition;
+
+      &:hover,
+      &:focus {
+        background-color: $color-white;
+        color: $color-gray-darker;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  &__category {
+    &-item {}
+    &-arrow {
+      //background: rgba($color-black, 0.2);
+      border-left: 1px solid $color-gray-dark;
+    }
+  }
+}

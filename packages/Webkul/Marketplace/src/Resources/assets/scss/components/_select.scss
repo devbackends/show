@@ -1,0 +1,40 @@
+// styled select
+.styled-select {
+  appearance: none;
+
+  & + .select-icon-container {
+    position: relative;
+    pointer-events: none;
+
+    .select-icon {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+
+      &.language-arrow-icon {
+        right: 0px;
+      }
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background-image: url("/images/select-arrow-down.svg");
+  background-position: right 12px top 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  &.form-control {
+    padding: 9px 30px 9px 15px;
+  }
+  option {
+    color: $color-gray-darker;
+  }
+}

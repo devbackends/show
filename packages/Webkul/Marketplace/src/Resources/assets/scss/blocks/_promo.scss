@@ -1,0 +1,234 @@
+// promo section and grid
+.promo {
+  $this: &;
+
+  // marketing promo section
+  &-marketing {
+    padding: 30px 0;
+    background-color: $color-gray-darker;
+    color: $color-white;
+
+    @media only screen and (min-width: 992px) {
+      margin-bottom: 67px;
+      padding: 0;
+    }
+
+    &__info {
+      text-align: center;
+      order: 2;
+
+      @media only screen and (min-width: 992px) {
+        padding-top: 89px;
+        padding-bottom: 82px;
+        text-align: left;
+        order: 1;
+      }
+
+      .btn {
+        color: $color-primary;
+      }
+    }
+
+    &__head {
+      margin-bottom: 30px;
+
+      h2 {
+        font-weight: 400;
+      }
+
+      .h1 {
+        color: $color-primary;
+      }
+    }
+
+    &__media {
+      margin-bottom: 30px;
+      height: 374px;
+      order: 1;
+
+      @media only screen and (min-width: 992px) {
+        margin-top: 76px;
+        margin-bottom: -67px;
+        order: 2;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  // promo section
+  &-section {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    padding: 20px 0;
+    background-color: $color-gray-dark;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    @media only screen and (min-width: 992px) {
+      min-height: 230px;
+      padding: 30px 0;
+    }
+    &-big {
+      @media only screen and (min-width: 992px) {
+        min-height: 350px;
+      }
+    }
+
+    // title
+    &__title {
+      margin-bottom: 15px;
+      color: $color-white;
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .head {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $color-white;
+
+      @media only screen and (min-width: 992px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--dark {
+      background-color: $color-gray-darker;
+      color: $color-white;
+
+      .promo-section__title {
+        @media only screen and (min-width: 992px) {
+          margin-bottom: 34px;
+        }
+      }
+    }
+
+    &--light {
+      background-color: $color-gray-lighter;
+      color: $color-gray;
+
+      @media only screen and (min-width: 992px) {
+        padding-top: 90px;
+        padding-bottom: 338px;
+      }
+
+      .promo-section__title {
+        color: $color-gray-darker;
+
+        @media only screen and (min-width: 992px) {
+          margin-bottom: 174px;
+        }
+      }
+    }
+
+    &--low {
+      min-height: 230px;
+
+      @media only screen and (min-width: 992px) {
+        min-height: 300px;
+      }
+    }
+  }
+
+  // promo grid
+  &-grid {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    align-items: stretch;
+    padding: 15px;
+    background-color: $color-white;
+
+    @media only screen and (min-width: 992px) {
+      display: grid;
+      grid-gap: 30px;
+      grid: 1fr 1fr / 1fr 1fr;
+      padding: 30px;
+    }
+
+    // grid item
+    &__item {
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+
+        @media only screen and (min-width: 992px) {
+          margin-bottom: 0;
+        }
+      }
+
+      &--small-top {
+        @media only screen and (min-width: 992px) {
+          grid-row: 1 / 2;
+          grid-column: 1 / 1;
+        }
+      }
+
+      &--small-bottom {
+        @media only screen and (min-width: 992px) {
+          grid-row: 2 / 2;
+          grid-column: 1 / 1;
+        }
+      }
+
+      &--large {
+        #{$this}-section {
+          min-height: 350px;
+        }
+
+        @media only screen and (min-width: 992px) {
+          grid-row: 1 / span 2;
+          grid-column: 2 / span 2;
+        }
+      }
+    }
+
+    #{$this}-section {
+      height: 100%;
+    }
+  }
+  &-top-banner {
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: $color-white;
+    background-size: cover;
+    background-position-x: 40%;
+    @include media-breakpoint-up(md) {
+      padding: 7rem 5rem;
+      background-position-x: 0;
+    }
+    &__title {
+      font-size: 2rem;
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
+    }
+    a {
+      color: $color-white;
+    }
+  }
+}
+
+.promo-categories {
+  padding: 1rem 0;
+  .carousel, .carousel-inner, .carousel-item {
+    height: 100%;
+    min-height: 300px;
+  }
+}

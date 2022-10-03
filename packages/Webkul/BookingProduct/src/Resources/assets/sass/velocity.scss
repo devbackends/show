@@ -1,0 +1,199 @@
+@import "icons";
+
+.booking-information {
+    margin-bottom: 15px;
+
+    .booking-info-row {
+        padding-left: 32px;
+        margin-bottom: 20px;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            left: 0;
+            top: -4px;
+        }
+
+        .title {
+            color: #5E5E5E;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            display: block;
+            margin-bottom: 5px;
+
+            .text-danger {
+                color: #ff5656;
+            }
+        }
+
+        .toggle {
+            color: #0041ff;
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                margin-left: 5px;
+                top: -1px;
+
+                &.arrow-down-icon {
+                    background-image: url(../images/arrow-down-black-2.svg) !important;
+                }
+
+                &.arrow-up-icon {
+                    background-image: url(../images/arrow-up.svg) !important;
+                }
+            }
+        }
+    }
+
+    .book-slots {
+        display: inline-block;
+        width: 100%;
+
+        h3 {
+            font-weight: 600;
+            font-size: 16px;
+            color: #242424;
+            margin-top: 0;
+        }
+        
+        label {
+            color: #3a3a3a;
+        }
+
+        .control-group, .form-group {
+            label {
+                font-size: 16px;
+            }
+
+            .radio {
+                display: inline-block;
+            }
+        }
+
+        .control-group-container {
+            width: 100%;
+            float: left;
+
+            .control-group:not(.quantity), .form-group:not(.quantity) {
+
+                .control, .form-style {
+                    width: 100%;
+                }
+
+                &.date {
+                    padding-right: 5px;
+
+                    &::after {
+                        position: absolute;
+                        top: 14px;
+                        right: 10px;
+                    }
+                }
+
+                &.slots {
+                    &:first-child {
+                        padding-right: 5px;
+                    }
+
+                    &:last-child {
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .ticket-total {
+            font-size: 16px;
+            font-weight: 600;
+            color: #242424;
+            padding-top: 16px;
+
+            > div {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    color: #242424;
+                    font-weight: 400;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    &__info {
+        margin-bottom: 1.5rem;
+        p {
+            margin-bottom: 0;
+        }
+        &-icon {
+            i {
+                font-size: 1.25rem;
+            }
+        }
+        &-toggle {
+            cursor: pointer;
+        }
+    }
+    .ticket-list {
+        &__item {
+            border-bottom: 1px solid #EBEBEB;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+    }
+    .table.availability {
+        tbody {
+            tr {
+                td {
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+
+    &.date, &.datetime {
+        &::after {
+            background-image: url("../images/Icon-Calendar.svg");
+            width: 24px;
+            height: 24px;
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: -34px;
+            margin-top: 2px;
+            top: 3px !important;
+            pointer-events: none;
+        }
+    }
+}
+

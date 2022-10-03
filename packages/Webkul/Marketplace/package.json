@@ -1,0 +1,43 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.10.5",
+        "axios": "^0.18",
+        "bootstrap": "^4.5.0",
+        "cross-env": "^5.1.4",
+        "flatpickr": "^4.6.7",
+        "jquery": "^3.2",
+        "laravel-mix": "^2.1",
+        "laravel-mix-merge-manifest": "^0.1.1",
+        "vue": "^2.1.10",
+        "vue-carousel": "^0.18.0"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.10.5",
+        "accounting": "^0.4.1",
+        "font-awesome": "^4.7.0",
+        "material-icons": "^0.3.1",
+        "popper.js": "^1.16.1",
+        "request": "^2.88.2",
+        "v-select2-component": "^0.4.7",
+        "v-select2-multiple-component": "^0.1.1",
+        "vee-validate": "^2.2.15",
+        "vue-inner-image-zoom": "^1.1.1",
+        "vue-select2": "^0.2.6",
+        "vue-slider-component": "^3.1.0",
+        "vue-toast-notification": "0.0.2",
+        "vue2-google-maps": "^0.10.7",
+        "vue2-timepicker": "^1.1.6",
+        "vuedraggable": "^2.24.3",
+        "vuex": "^3.5.1"
+    }
+}

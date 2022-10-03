@@ -1,0 +1,10 @@
+db:
+  type: mariadb:10.4
+  disk: 2048
+
+searchelastic:
+  type: elasticsearch:7.7
+  disk: 1024
+
+cache:
+    type: redis:5.0

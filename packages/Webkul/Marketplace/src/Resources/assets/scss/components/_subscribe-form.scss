@@ -1,0 +1,23 @@
+// subscribe form
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (min-width: 992px) {
+    justify-content: flex-start;
+  }
+
+  // form input
+  &-input {
+    width: 100%;
+    max-width: 253px;
+    margin-right: 15px;
+  }
+
+  // action button
+  &-submit {
+    color: $color-primary;
+    white-space: nowrap;
+  } 
+}

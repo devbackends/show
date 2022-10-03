@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon-Marketplace</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icon-Marketplace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(9.000000, 9.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#979797" stroke-width="2">
+            <rect id="Rectangle-12" x="0" y="1" width="30" height="29" rx="1"></rect>
+            <rect id="Rectangle" x="5" y="16" width="7" height="6" rx="1"></rect>
+            <g id="Group">
+                <path d="M1,0 L9,0 C9.55228475,-1.01453063e-16 10,0.44771525 10,1 L10,4.5 C10,6.98528137 7.98528137,9 5.5,9 L4.5,9 C2.01471863,9 3.04359188e-16,6.98528137 0,4.5 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z" id="Rectangle-12"></path>
+                <path d="M10,0 L20,0 L20,4 C20,6.76142375 17.7614237,9 15,9 L15,9 C12.2385763,9 10,6.76142375 10,4 L10,0 Z" id="Rectangle-12-Copy"></path>
+                <path d="M21,0 L29,0 C29.5522847,-1.01453063e-16 30,0.44771525 30,1 L30,4.5 C30,6.98528137 27.9852814,9 25.5,9 L24.5,9 C22.0147186,9 20,6.98528137 20,4.5 L20,1 C20,0.44771525 20.4477153,1.01453063e-16 21,0 Z" id="Rectangle-12-Copy-2"></path>
+            </g>
+            <path d="M17,16 L25,16 C25.5522847,16 26,16.4477153 26,17 L26,29 C26,29.5522847 25.5522847,30 25,30 L17,30 C16.4477153,30 16,29.5522847 16,29 L16,17 C16,16.4477153 16.4477153,16 17,16 Z" id="Rectangle-13"></path>
+        </g>
+    </g>
+</svg>

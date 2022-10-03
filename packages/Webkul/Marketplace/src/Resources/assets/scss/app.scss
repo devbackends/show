@@ -1,0 +1,87 @@
+// Scss utilities
+@import "helpers/variables";
+
+// Default theme variables
+@import "helpers/mixins";
+
+// Scss utilities
+@import "helpers/variables-bootstrap";
+
+// vendors
+@import "vendors/bootstrap/bootstrap-custom.scss";
+@import "vendors/slick";
+@import "vendors/slick-theme";
+
+@import "base/typography";
+@import "base/main";
+
+// Components
+@import "components/select"; // styled default select
+@import "components/form"; // form elements
+@import "components/search-form"; // search form for the header
+@import "components/scroller"; // style default scroller of the browser
+@import "components/button"; // overwrite bootstrap buttons
+@import "components/dropdown"; // overwrite bootstrap dropdown
+@import "components/social"; // social links (in the subscription section)
+@import "components/subscribe-form"; // subscription form
+@import "components/product-item"; // product item (card)
+@import "components/box-section"; // box section for the sign in/out pages
+@import "components/pagination"; // pagination
+@import "components/table"; // table
+@import "components/modal"; // modal box
+@import "components/dashboard-box"; // dashboard box with a different type of information
+@import "components/card"; // card box for hhe different type of content
+@import "components/tabs"; // tabs navigation and tabs content
+@import "components/compare"; // compare table (compare products)
+@import "components/cart"; // cart box (dropdown) in a header
+@import "components/show-card"; // guns shows card
+@import "components/slider"; // slider
+@import "components/rater";
+@import "components/reviews";
+@import "components/tree-view";
+@import "components/alert";
+@import "components/announcement";
+@import "components/accordion";
+@import "components/date-picker";
+@import "components/steps";
+@import "components/cta";
+@import "components/sidebar";
+
+// Scss utilities
+@import "helpers/helpers"; // helper classes (the old version of the theme file (moved from the public/css folder)
+
+// Blocks (styles for independent blocks)
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/nav-category";
+@import "blocks/subscribe";
+@import "blocks/promo";
+@import "blocks/inform";
+@import "blocks/product";
+@import "blocks/map";
+@import "blocks/seller";
+@import "blocks/features";
+@import "blocks/member-types";
+@import "blocks/account";
+@import "blocks/cart-details";
+@import "blocks/order-confirmation";
+@import "blocks/order";
+@import "blocks/checkout";
+@import "blocks/shows";
+@import "blocks/hero";
+@import "blocks/community";
+@import "blocks/profile";
+@import "blocks/instructors";
+@import "blocks/dashboard";
+@import "blocks/ffl";
+@import "blocks/messaging";
+@import "blocks/create-product";
+@import "blocks/instructors-landing";
+@import "blocks/shopping-cart";
+@import "blocks/seller-signup";
+@import "blocks/store-settings";
+@import "blocks/categories";
+@import "blocks/event-product";
+@import "blocks/settings-page";
+@import "../sass/icons";
+

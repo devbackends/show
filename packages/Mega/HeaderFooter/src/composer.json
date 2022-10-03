@@ -1,0 +1,25 @@
+{
+    "name": "mega/headerfooter",
+    "description": "Extension to add miscellaneous header and footer HTML and miscellaneous JS",
+    "authors": [
+        {
+            "name": "Team CodeInnovers",
+            "email": "codeinnovers@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Mega\\HeaderFooter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mega\\HeaderFooter\\Providers\\HeaderFooterServiceProvider"
+            ]
+        }
+    }
+}

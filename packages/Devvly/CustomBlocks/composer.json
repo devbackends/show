@@ -1,0 +1,25 @@
+{
+    "name": "devvly/CustomBlocks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "devvly",
+            "email": "info@devvly.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\CustomBlocks\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\CustomBlocks\\Providers\\CustomBlocksServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

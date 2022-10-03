@@ -1,0 +1,25 @@
+{
+    "name": "mega/phonelogin",
+    "description": "Login By Mobile Number And OTP verification Extension",
+    "authors": [
+        {
+            "name": "Sam Parker",
+            "email": "samparker801@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "Mega\\Phonelogin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mega\\Phonelogin\\Providers\\PhoneloginServiceProvider"
+            ]
+        }
+    }
+}

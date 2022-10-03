@@ -1,0 +1,25 @@
+{
+    "name": "devvly/FluidPayment",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "devvly",
+            "email": "info@devvly.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Devvly\\FluidPayment": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devvly\\FluidPayment\\Providers\\FluidPaymentServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "stable"
+}

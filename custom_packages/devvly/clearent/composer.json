@@ -1,0 +1,23 @@
+{
+  "name": "devvly/clearent",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "devvly",
+      "email": "info@devvly.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.8 || ^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "~6.0",
+    "nesbot/carbon": "^2.0",
+    "psr/log": "^1.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Devvly\\Clearent\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}

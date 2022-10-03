@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  a {
+    margin: 0 5px;
+    color: $color-gray-dark;
+    text-decoration: none;
+    transition: $transition;
+
+    &.previous,
+    &.next {
+      padding: 0 5px;
+      color: $color-gray-darker;
+    }
+
+    &:not(.active) {
+      cursor: pointer;
+    }
+
+    &:not(.active):hover,
+    &:not(.active):focus,
+    &.active {
+      color: $color-info-dark !important;
+      font-weight: bold;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+}

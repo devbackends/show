@@ -1,0 +1,95 @@
+.modal {
+    &-title {
+        margin-bottom: 15px;
+    }
+    &-section-title {
+        font-size: $font-md;
+        font-family: $heading;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    &-actions {
+        margin-top: 15px;
+    }
+    &-body {
+        padding: 30px;
+    }
+    &-content {
+        overflow: hidden;
+    }
+    &__ffl {
+        padding: 0;
+        &-left {
+            position: relative;
+            padding: 30px;
+        }
+        &-preferred-text {
+            background-image: url("/images/ffl-preferred-icon.svg");
+            background-position: left center;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+            padding: 10px 0 10px 30px;        
+        }
+        &-list {
+            max-height: 400px;
+            overflow: auto;
+            &-item {
+                position: relative;
+                padding: 8px;
+                border-bottom: 1px solid $gray-light;
+                p {
+                    margin-bottom: 0;
+                }
+                &-name {
+                    @extend %paragraph-bold;
+                }
+                &-distance {}
+                &-address {}
+                &-preferred {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                &-overlay {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($white, 0.6);
+                }
+                &:hover {
+                    .modal__ffl-list-item {
+                        border-bottom: 1px solid transparent;
+                    }
+                    .modal__ffl-list-item-overlay {
+                        display: flex;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        cursor: pointer;
+                        border: 2px solid $primary;
+                    }
+                }
+            }
+        }
+        &-search {
+            margin-bottom: 15px;
+        }
+        #map {
+            .vue-map-container {
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+}
+
+.cd-quick-view {
+    border-radius: 8px;
+}

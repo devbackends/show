@@ -1,0 +1,90 @@
+.box-section {
+  margin: 0 auto 0;
+  border-radius: .25rem;
+  padding: 2rem;
+  box-shadow: $box-shadow;
+  background-color: $color-white;
+
+  &-wrapper {
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 19px;
+
+    h3 {
+      margin: 0;
+    }
+    &-title {
+      @extend %font-paragraph-big-bold;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.image-box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  /* background-position: 50% 0; */
+  // margin-bottom: 30px;
+  height: 100%;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-bottom: 0.5rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0.25rem;
+  }
+  &__big {
+    @include media-breakpoint-down(md) {
+      min-height: 14rem;
+    }
+  }
+  &__rifles {
+    background-image: url(../images/image-box-rifles.jpg);
+  }
+  &__handguns {
+    background-image: url(../images/image-box-handguns.jpg);
+  }
+  &__guns {
+    background-image: url(../images/image-box-guns.jpg);
+  }
+  &__ammo {
+    background-image: url(../images/image-box-ammo.jpg);
+  }
+  &__clothing {
+    background-image: url(../images/image-box-clothing.jpg);
+  }
+  &__collectibles {
+    background-image: url(../images/image-box-collectibles.jpg);
+  }
+  &__trainings {
+    background-image: url(../images/image-box-trainings.jpg);
+  }
+  &__knives {
+    background-image: url(../images/image-box-knives.jpg);
+  }
+  &__accesories {
+    background-image: url(../images/image-box-accesories.jpg);
+  }
+  &__clothing {
+    background-image: url(../images/image-box-clothing.jpg);
+  }
+}
+a .image-box {
+  box-shadow: 0 0 0 5px transparent inset;
+}
+a:hover .image-box {
+  box-shadow: 0 0 0 5px rgba($color-primary, 0.8) inset;
+}

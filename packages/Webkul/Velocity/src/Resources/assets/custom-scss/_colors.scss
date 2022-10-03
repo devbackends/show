@@ -1,0 +1,67 @@
+// scale-color(#ff881a, $lightness: -16%)
+$primary-lighter: #ffd1a6;
+$primary-light: #ffaf64;
+$primary: #ff881a;
+$primary-dark: #e87307;
+$primary-darker: #ba5a00;
+
+$secondary-lighter: #FDCACF;
+$secondary-light: #FB7C88;
+$secondary: #DC3545;
+$secondary-dark: #B91A29;
+$secondary-darker: #880E19;
+
+$accent-lighter: #ffd1a6;
+$accent-light: #ffaf64;
+$accent: #ff881a;
+$accent-dark: #e87307;
+$accent-darker: #ba5a00;
+
+$gray-lighter: #ebebeb;
+$gray-light: #dddddd;
+$gray: #9d9d9d;
+$gray-dark: #666666;
+$gray-darker: #333333;
+
+$black: #111111;
+$white: #FFFFFF;
+
+$info: #2ECEE8;
+$info-dark: #0C91A6;
+$warning: #FFC107;
+$danger: #F21313;
+$success: #28A745;
+
+$theme-colors: (
+  "primary-lighter": $primary-lighter,
+  "primary-light": $primary-light,
+  "primary": $primary,
+  "primary-dark": $primary-dark,
+  "primary-darker": $primary-darker,
+  "secondary-lighter": $secondary-lighter,
+  "secondary-light": $secondary-light,
+  "secondary": $secondary,
+  "secondary-dark": $secondary-dark,
+  "secondary-darker": $secondary-darker,
+  "accent-lighter": $accent-lighter,
+  "accent-light": $accent-light,
+  "accent": $accent,
+  "accent-dark": $accent-dark,
+  "gray-lighter": $gray-lighter,
+  "gray-light": $gray-light,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
+  "gray-darker": $gray-darker,
+  "light": $gray-lighter,
+  "dark": $gray-darker
+);
+
+
+$facebook-color: #3b5998;
+$twitter-color: #0084b4;
+$google-color: #de5246;
+$rss-color: #ef9e06;
+$microphone-color: #3c5a9a;
+$apple-color: #0596f1;
+$linkedin-color: #0072b1;
+$instagram-color: #c23486;

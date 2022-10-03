@@ -1,0 +1,24 @@
+// Color system
+
+$theme-colors: (
+  "primary-lighter": $color-primary-lighter,
+  "primary-light": $color-primary-light,
+  "primary": $color-primary,
+  "primary-dark": $color-primary-dark,
+  "primary-darker": $color-primary-darker,
+  "secondary-lighter": $color-secondary-lighter,
+  "secondary-light": $color-secondary-light,
+  "secondary": $color-secondary,
+  "secondary-dark": $color-secondary-dark,
+  "secondary-darker": $color-secondary-darker,
+  "info": $color-info,
+  "info-dark": $color-info-dark,
+  "gray-lighter": $color-gray-lighter,
+  "gray-light": $color-gray-light,
+  "gray": $color-gray,
+  "gray-dark": $color-gray-dark,
+  "gray-darker": $color-gray-darker,
+  "light": $color-gray-lighter,
+  "dark": $color-gray-darker,
+  "black": $color-black
+);

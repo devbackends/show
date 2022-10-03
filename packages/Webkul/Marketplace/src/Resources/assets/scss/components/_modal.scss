@@ -1,0 +1,519 @@
+.modal {
+  $this: &;
+
+  // modal dialog
+  &-dialog {
+
+    &:not(.modal-lg):not(.modal-xl) {
+      @media only screen and (min-width: 576px) {
+        max-width: 554px;
+      }
+    }
+  }
+
+  // normal size
+  &.normal {
+    #{$this}-dialog {
+      @media only screen and (min-width: 576px) {
+        max-width: 415px;
+      }
+    }
+
+    #{$this}-head {
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 27px;
+      }
+    }
+  }
+
+  // modal content
+  &-content {
+    border: 0 none;
+  }
+
+  // modal body
+/*   &-body {
+    padding: 20px;
+
+    @media only screen and (min-width:992px) {
+      padding: 40px;
+    }
+  } */
+
+  // modal head
+  &-head {
+    margin-bottom: 30px;
+    text-align: center;
+    h3 {
+      @extend %font-paragraph-big-bold;
+    }
+
+    @media only screen and (min-width: 992px) {
+      margin-bottom: 49px;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    i {
+      display: block;
+      margin-bottom: 11px;
+      font-size: 36px;
+    }
+  }
+
+  &-header {
+    justify-content: center;
+    padding: 3rem 2.5rem 1rem;
+    border-bottom: none;
+    &-content {
+      width: 100%;
+      text-align: center;
+      i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .modal-title {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  &-body {
+    &-center {
+      text-align: center;
+    }
+    padding: 1rem 2.5rem 2.5rem;
+  }
+  &-footer {
+    //border-top: none;
+    justify-content: space-between;
+  }
+
+  // modal backdrop
+  &-backdrop {
+    &.show {
+      opacity: .7;
+    }
+  }
+
+  .modal-title {
+    @extend %font-paragraph-big-bold;
+  }
+  // section title
+  .modal-section-title {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    @extend %font-paragraph-bold;
+  }
+
+  // modal close button
+  .close {
+    position: absolute;
+    top: 17px;
+    right: 19px;
+    opacity: 1;
+    color: inherit;
+
+    i {
+      font-size: 36px;
+      font-weight: 300;
+    }
+  }
+
+  // modal review modification
+  &--review {
+
+    #{$this}-head {
+      margin-bottom: 23px;
+
+      small {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin-bottom: 11px;
+      }
+
+      p {
+        margin: 0;
+        font-size: .875rem;
+      }
+    }
+
+    .rate {
+      color: $color-info-dark;
+
+      a {
+        color: inherit;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // modal cart modification
+  &--cart {
+
+    #{$this}-head {
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  // add cart modification
+  &--add-card {
+
+    #{$this}-head {
+      margin-bottom: 43px;
+      text-align: left;
+
+      h3 {
+        font-family: inherit;
+        font-weight: normal;
+      }
+    }
+
+    .save-card-controls-col {
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        font-size: 14px;
+        transform: translate3d(0, -50%, 0);
+        color: $color-gray;
+      }
+
+      &:first-child:not(:last-child) {
+        .form-control {
+          border-radius: 0 0 0 $border-radius;
+        }
+      }
+
+      &:last-child:not(:first-child) {
+        .form-control {
+          border-radius: 0 0 $border-radius 0;
+        }
+      }
+
+      &:first-child:last-child {
+        .form-control {
+          border-radius: $border-radius $border-radius 0 0;
+          border-bottom: 0 none;
+        }
+      }
+    }
+
+    .form-control {
+      height: 34px;
+      padding: 5px;
+      padding-bottom: 5px;
+      padding-left: 35px;
+      font-size: 14px;
+    }
+
+    .save-card-checkbox {
+      margin-top: 26px;
+      margin-bottom: 36px;
+    }
+
+    .form-check input[type="checkbox"] + label {
+      &:after {
+        color: $color-info-dark !important;
+      }
+    }
+  }
+
+  // add new address
+  &--add-address {
+
+    .modal-head {
+      text-align: left;
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 37px;
+      }
+
+      h3 {
+        font-family: inherit;
+        font-weight: 400;
+      }
+    }
+  }
+
+  // select address
+  &--select-address {
+    .modal-head {
+      text-align: left;
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .add-address-button {
+      font-weight: 700;
+      cursor: pointer;
+
+      i {
+        display: block;
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  // select ffl
+  &--select-ffl {
+    .modal-head {
+      text-align: left;
+
+      @media only screen and (min-width: 992px) {
+        margin-bottom: 18px;
+      }
+    }
+
+    .modal__ffl {
+      padding: 0;
+
+      &-left {
+        padding: 15px 15px 0;
+
+        @media only screen and (min-width: 992px) {
+          padding: 35px 38px 0 50px;
+        }
+
+        .close {
+          @media only screen and (min-width:992px) {
+            right: 0;
+          }
+        }
+      }
+
+      &-preferred-text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 23px;
+
+        &:before {
+          display: block;
+          width: 23px;
+          height: 23px;
+          margin-right: 3px;
+          background: url(../images/icons/preferred-ffl.svg) 0 0 no-repeat;
+          background-size: cover;
+          content: '';
+        }
+      }
+
+      &-list {
+        max-height: 376px;
+        padding-right: 10px;
+        overflow-y: auto;
+
+        @media only screen and (min-width:992px) {
+          margin-right: -15px;
+        }
+
+        &-item {
+          position: relative;
+          padding: 11px 0 12px;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-gray-light;
+          }
+
+          &:hover,
+          &:focus {
+            .modal__ffl-list-item-overlay {
+              display: flex;
+            }
+          }
+
+          &:before {
+            display: block;
+            position: absolute;
+            top: 11px;
+            right: 12px;
+            width: 23px;
+            height: 23px;
+            background: url(../images/icons/preferred-ffl.svg) 0 0 no-repeat;
+            background-size: cover;
+            content: '';
+          }
+
+          &.recommended {
+            border-bottom: 0 none;
+            border-radius: $border-radius;
+            padding: 6px 11px;
+            box-shadow: inset 0 0 0 2px $color-primary;
+
+            &:before {
+              top: 9px;
+            }
+          }
+
+          &-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-white-70;
+            z-index: 2;
+          }
+
+          &-content {
+            p {
+              margin-bottom: 0;
+            }
+          }
+
+          &-name {
+            font-weight: 700;
+          }
+
+          &-distance {
+            margin-top: -2px;
+            margin-bottom: 3px;
+            font-size: .75rem;
+          }
+
+          &-address {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group-text {
+        background-color: $color-gray-dark;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+
+.modal__ffl {
+  padding: 0;
+  &-list {
+    max-height: 400px;
+    overflow: auto
+  }
+  &-list-item {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    p {
+      margin-bottom: 0
+    }
+    &--preferred {
+      position: absolute;
+      right: 0;
+      top: 0
+    }
+    &-overlay {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background: hsla(0,0%,100%,.6)
+    }
+    &:hover {
+      .modal__ffl-list-item {
+        border-bottom: 1px solid transparent
+      }
+      .modal__ffl-list-item-overlay {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        border: 2px solid $color-danger;
+      }
+    }
+    &-more {
+      display: none;
+      margin-top: 0.5rem;
+    }
+    &-fees {
+      font-size: $font-sm;
+      margin-bottom: 0.5rem;
+      padding: 0.75rem;
+      border: 1px solid rgba($color-gray, 0.25);
+    }
+    &-fee {
+      &-value {
+        font-size: $font-md;
+        font-weight: bold;
+      }
+    }
+    &--clicked {
+      background: $color-gray-extralight;
+      .modal__ffl-list-item-more {
+        display: block;
+      }
+    }
+    &-link {
+      display: block;
+      padding: 1rem;
+      color: $color-black;
+      &:hover {
+        color: $color-black;
+      }
+    }
+    &-name {
+      font-weight: bold;
+    }
+    &-distance {
+      font-weight: normal;
+      color: $color-gray;
+    }
+    &-address {
+      //font-size: $font-sm;
+    }
+    &:hover {
+      background: $color-gray-light;
+    }
+  }
+  &-left {
+    position: relative;
+    padding: 30px
+  }
+  &-preferred-text {
+    background-image: url("/images/ffl-preferred-icon.svg");
+    background-position: 0;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 30px
+  }
+  &-search {
+    margin-bottom: 15px;
+  }
+  #map .vue-map-container {
+    width: 100%!important;
+    height: 100%!important
+  }
+}

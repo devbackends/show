@@ -1,0 +1,131 @@
+.header-top {
+    &#top {
+        border-bottom: none;
+        background: $white;
+        #account + .account-modal {
+            top: 5px;
+            .modal-content {
+                padding: 20px;
+            }
+        }
+    }
+    &__locale {
+        display: inline-block;
+        &-select {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $font-sm;
+            border: none;
+            margin: 2px 0 0 2px;
+            background-position: right 0 center;
+        }
+        &-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    &__user {
+        text-align: right;
+        &-content {
+            display: inline-block;
+            margin-left: 15px;
+            border-left: 1px solid $gray-light;
+            padding-left: 15px;
+            cursor: pointer;
+            .modal-footer {
+                padding: 0;
+                .btn {
+                    @extend %btn;
+                    font-size: $font-md !important;
+                    border-radius: 4px !important;
+                    font-family: $heading !important;
+                    margin: 0 5px;
+                    &:last-child {
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+            #account {
+                div {
+                    background-image: url("/images/select-arrow-down.svg");
+                    background-position-x: right;
+                    background-position-y: center;
+                    background-repeat: no-repeat;
+                    padding-right: 20px;
+                }
+            }
+            .account-modal {
+                .modal-content {
+                    padding: 0 !important;
+                }
+                .customer-session {
+                    padding: 20px 20px 10px 20px;
+                    border-bottom: 1px solid $gray-light;
+                    p {
+                        font-family: $heading;
+                        margin-bottom: 0;
+                    }
+                }
+                .customer-options {
+                    height: auto;
+                    li {
+                        padding: 0;
+                        &:hover {
+                            background: transparent;
+                        }
+                        a {
+                            padding: 4px 20px !important;
+                            display: block;
+                            &:hover {
+                                color: $info-dark;
+                            }
+                        }
+                        &:last-child {
+                            margin-top: 10px;
+                            a {
+                                border-top: 1px solid $gray-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &-name {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: $font-sm;
+            margin-bottom: 0;
+        }
+        &-dropdown {
+        }
+        ul {
+            margin-bottom: 0;
+            text-align: right;
+            display: inline-block;
+            vertical-align: middle;
+            li.sell-button {
+                margin-left: auto;
+                a {
+                    font-size: $font-md;
+                    @extend %paragraph-bold;
+                    color: $primary;
+                    &:hover {
+                        color: $primary-dark;
+                    }
+                }
+            }
+        }
+    }
+    &__menu {
+        &-item {
+        }
+    }
+}
+
+#top .dropdown {
+    margin-right: 0px;
+}

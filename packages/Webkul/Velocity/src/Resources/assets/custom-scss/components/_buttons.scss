@@ -1,0 +1,209 @@
+%btn {
+    @extend %paragraph-bold;
+    /* text-transform: uppercase; */
+    /* height: $form-input-height; */
+/*     padding: 9px 20px;
+    border-radius: 4px; */
+}
+.btn {
+    @extend %btn;
+    padding: 0.375rem 0.55rem;
+    &-sm {
+        font-size: $font-sm;
+        height: 30px;
+        padding: 3px 12px;
+    }
+    i {
+        margin-right: 5px;
+    }
+}
+.btn-primary {
+    color: $white;
+}
+
+[class^="btn btn-outline"] {
+    border-width: 2px !important;
+}
+
+.btn-outline-primary {
+    color: $gray-darker;
+    &:hover {
+        color: $white;
+    }
+}
+
+.card {
+    .add-to-cart-btn {
+        .btn.btn-outline-primary {
+            width: 100%;
+        }
+    }
+}
+
+.add-to-cart-btn {
+    .btn.btn-outline-primary {
+        &:disabled {
+            color: $gray-dark;
+        }
+        span {
+            font-family: $heading;
+        }
+    }
+}
+
+
+
+
+
+
+/* NOTE: This needs to be removed and replaced with regular btn classes */
+.theme-btn:hover {
+    border-color: $primary !important;
+    background-color: $primary !important;
+}
+.theme-btn {
+    background-color: $primary !important;
+}
+.theme-btn.light {
+    color: #666666;
+}
+.theme-btn.light {
+    color: #666666;
+}
+
+.theme-btn.light {
+    border: 2px solid $primary;
+    color: #333333 !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+.theme-btn.light:hover {
+    background-color: $primary;
+    color: #ffffff;
+}
+.theme-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+}
+.theme-btn {
+    background: $primary;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    /* White */
+    color: #ffffff;
+    z-index: 0;
+}
+
+.theme-btn:hover {
+    border-color: $primary !important;
+    background-color: $primary !important;
+    opacity: 0.8;
+}
+.theme-btn:focus {
+    background-color: $primary;
+    opacity: 0.8;
+    border-color: $primary !important;
+    color: #ffffff;
+}
+.theme-btn:active {
+    background-color: $primary;
+    opacity: 0.8;
+    border-color: $primary !important;
+    color: #ffffff;
+}
+
+.bordered-button {
+    text-transform: capitalize;
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $primary;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.bordered-button:hover {
+    opacity: 0.7;
+    text-decoration: none !important;
+    color: $primary !important;
+}
+
+.light-black-bordered-button {
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+.light-black-bordered-button:hover,
+.light-black-bordered-button:focus,
+.light-black-bordered-button:active {
+    opacity: 0.7;
+    text-decoration: none !important;
+    color: #333333 !important;
+}
+/*.light-black-bordered-button span{line-height: 36px;}*/
+
+.black-bordered-button {
+    border: 2px solid #333333;
+    color: #333333;
+    font-size: 14px;
+    line-height: 19px;
+    height: 30px;
+}
+.black-bordered-button:hover {
+    opacity: 0.7;
+    text-decoration: none !important;
+    color: #333333 !important;
+}
+.black-bordered-button span {
+    line-height: 26px;
+}
+
+.custom-forgot-link {
+    float: right !important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    /* identical to box height */
+    text-align: center;
+    /* Secondary 700 */
+    color: #0c91a6;
+    vertical-align: middle;
+    line-height: 47px;
+    text-decoration: none;
+}
+.custom-forgot-link:hover {
+    color: #0c91a6;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.theme-btn.fs14.fw6 {
+    padding: 8px 12px !important;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+
+    /* White */
+    color: #ffffff;
+}
+
+/* end of NOTE */

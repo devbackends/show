@@ -1,0 +1,64 @@
+@import "fonts";
+
+* {
+    font-family: $objektive;
+}
+
+.tabs ul li.active a {
+    border-bottom: 3px solid #333333 !important;
+}
+
+#ffl {
+    .select_label {
+        width: 100%;
+    }
+
+    .select_label:after {
+        right: 0;
+        top: 10px !important;
+    }
+
+    .onboarding-upload-button-text {
+        font-family: $objektive;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        color: #333333;
+    }
+
+    .onboarding-upload-button {
+        padding: 7px 15px;
+        border: 2px solid #333333;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-family: Objektiv Mk1;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .license-icon {
+        background-image: url("/images/upload_2.svg");
+        height: 24px;
+        width: 25px;
+    }
+
+    .disabled .accordian-header, .disabled i {
+        color: #DDDDDD;
+    }
+
+    .accordian-header {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .btn {
+        border: 0;
+    }
+}

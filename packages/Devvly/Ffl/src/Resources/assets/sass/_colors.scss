@@ -1,0 +1,50 @@
+$primary-lighter: #FFF48E;
+$primary-light: #FFED4E;
+$primary: #FFD913;
+$primary-dark: #EFD700;
+$primary-darker: #D9C300;
+
+$secondary-lighter: #FDCACF;
+$secondary-light: #FB7C88;
+$secondary: #DC3545;
+$secondary-dark: #B91A29;
+$secondary-darker: #880E19;
+
+$accent-light: #FFEB76;
+$accent: #FFDE20;
+$accent-dark: #FDB80C;
+
+$gray-lighter: #EBEBEB;
+$gray-light: #DDDDDD;
+$gray: #9D9D9D;
+$gray-dark: #666666;
+$gray-darker: #333333;
+
+$white: #FFFFFF;
+$black: #111111;
+
+$info: #2ECEE8;
+$info-dark: #0C91A6;
+
+$theme-colors: (
+  "primary-lighter": $primary-lighter,
+  "primary-light": $primary-light,
+  "primary": $primary,
+  "primary-dark": $primary-dark,
+  "primary-darker": $primary-darker,
+  "secondary-lighter": $secondary-lighter,
+  "secondary-light": $secondary-light,
+  "secondary": $secondary,
+  "secondary-dark": $secondary-dark,
+  "secondary-darker": $secondary-darker,
+  "accent-light": $accent-light,
+  "accent": $accent,
+  "accent-dark": $accent-dark,
+  "gray-lighter": $gray-lighter,
+  "gray-light": $gray-light,
+  "gray": $gray,
+  "gray-dark": $gray-dark,
+  "gray-darker": $gray-darker,
+  "light": $gray-lighter,
+  "dark": $gray-darker
+);

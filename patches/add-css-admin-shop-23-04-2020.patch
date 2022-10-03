@@ -1,0 +1,38 @@
+diff --git a/src/Resources/views/admin.blade.php b/src/Resources/views/admin.blade.php
+index ae54396..ea5ffc8 100644
+--- a/src/Resources/views/admin.blade.php
++++ b/src/Resources/views/admin.blade.php
+@@ -1,13 +1 @@
+-<!-- <link href="path_to_your_css_file" rel="stylesheet" /> -->
+-
+-<!-- or -->
+-
+-<style>
+-    .container {
+-        background: unset;
+-    }
+-    
+-    body {
+-        background: green !important;
+-    }
+-</style>
+\ No newline at end of file
++<link href="{{asset('css/custom.css')}}" rel="stylesheet" />
+\ No newline at end of file
+diff --git a/src/Resources/views/shop.blade.php b/src/Resources/views/shop.blade.php
+index 83387a5..5be6074 100644
+--- a/src/Resources/views/shop.blade.php
++++ b/src/Resources/views/shop.blade.php
+@@ -1,9 +1 @@
+-<!-- <link href="path_to_your_css_file" rel="stylesheet" /> -->
+-
+-<!-- or -->
+-
+-<style>
+-    body {
+-        background: red !important;
+-    }
+-</style>
+\ No newline at end of file
++<link href="{{asset('css/shop.css')}}" rel="stylesheet" />
+\ No newline at end of file

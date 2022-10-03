@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "ObjektivMk1";
+  src: url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot"); /* IE9*/
+  src: url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff2") format("woff2"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff") format("woff"), /* chrome firefox */
+  url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("https://db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.svg#ObjektivMk1") format("svg"); /* iOS 4.1- */
+}
+
+html, body {
+  height: 100%;
+}
+
+@font-face {
+  @import url("https://use.typekit.net/wsj6owo.css");
+}
+
+$objektive: "objektiv-mk1", sans-serif;
+$objektive-regular: 400;
+$objektive-medium: 500;
+$objektive-bold: 700;
+$objektive-extrabold: 800;
+$objektive-black: 900;
+$poster: "poster-gothic-atf", sans-serif;
+$poster-light: 300;
+$poster-regular: 400;
+$poster-medium: 500;
+$poster-bold: 600;
+$poster-heavy: 700;
+

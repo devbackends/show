@@ -1,0 +1,54 @@
+.sidebar .category-content .category-title {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: $primary;
+    text-transform: capitalize;
+}
+
+.sidebar .sub-categories .category .category-title {
+    top: 1px;
+}
+
+.sidebar .category-content .category-icon {
+    vertical-align: middle;
+}
+
+.sidebar .category-content .rango-arrow-right {
+    top: 0;
+}
+
+.category-list-container .sub-categories {
+    top: 8px;
+}
+
+.category-list-container {
+    .category-content {
+        .category {
+            padding: 8px 0;
+            line-height: initial;
+            .category-title {
+                font-size: $font-md;
+            }
+            .rango-arrow-right {
+                top: 4px;
+            }
+        }
+    }
+}
+
+#category-menu-header {
+    background: $white;
+    .content-list {
+        a {
+            background: $white;
+            color: $primary;
+            height: 100%;
+            &:hover {
+                background: $primary;
+                color: $white;
+            }
+        }
+    }
+}

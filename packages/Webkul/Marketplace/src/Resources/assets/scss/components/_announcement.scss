@@ -1,0 +1,46 @@
+.announcement {
+    width: 100%;
+    min-height: 4rem;
+    position: relative;
+    background: $color-primary;
+    padding: 2.5rem 1rem 1rem;
+    text-align: center;
+    font-size: $base-font-size;
+    @include media-breakpoint-up(md) {
+        padding: 1rem 4rem;
+        text-align: left;
+    }
+    &--fixed {
+        position: fixed;
+        top: 0;
+        z-index: $z-index-announcement;
+    }
+    p {
+        margin-bottom: 0;
+        font-weight: 700;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a.btn {
+        vertical-align: middle;
+    }
+    &__close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@keyframes announcementin {
+    from {
+        top: -4rem;
+    }
+
+    to {
+        top: 0;
+    }
+}

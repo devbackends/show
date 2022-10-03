@@ -1,0 +1,73 @@
+.rater {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 5px;
+    width: 100%;
+
+    .star-name {
+        margin-right: 5px;
+        width: 35px;
+    }
+
+    .rate-number {
+        width:15px;
+    }
+
+    .percentage {
+        width: 50px;
+        margin-right: 10px;
+
+        span {
+            float: right;
+            white-space: nowrap;
+        }
+    }
+
+    .line-bar {
+        height: 4px;
+        width: calc(100% - 100px);
+        margin-right: 5px;
+        margin-left: 5px;
+        background: $color-gray-light;
+
+        .line-value {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.rating {
+    .stars {
+        .star {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background: white;
+            position: relative;
+            cursor: pointer;
+            &::after {
+                font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f005";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &:hover::after {
+                font-weight: 900;
+            }
+        }
+    }
+    &__create {
+        .far, .fas {
+            cursor: pointer;
+        }
+        .far {
+            color: $color-gray;
+        }
+    }
+}
+
+.stars {
+    .fas {
+        color: $color-primary;
+    }
+}

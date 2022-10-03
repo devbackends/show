@@ -1,0 +1,53 @@
+<?php
+
+return [
+    'general' => [
+        'general' => 'General',
+        'channel' => 'Channel',
+        'url-key' => 'URL Key',
+        'seo' => 'SEO',
+        'preview' => 'Preview',
+        'tags' => 'Tags',
+        'blog' => 'Blog',
+        'read-more' => 'Read More',
+        'back' => 'Back to all blog posts',
+        'share-on' => 'Share on',
+        'share-on-alt' => 'Share on :network',
+        'all' => 'All',
+        'published' => 'Published',
+        'view' => 'View',
+    ],
+    'post' => [
+        'post' => 'Post',
+        'posts' => 'Posts',
+        'add-post' => 'Add Post',
+        'edit-post' => 'Edit Post',
+        'edit' => 'Edit',
+        'save-post' => 'Save Post',
+        'title' => 'Title',
+        'image' => 'Image',
+        'image-link' => 'Image Link',
+        'created-at' => 'Published On',
+        'teaser' => 'Teaser',
+        'delete-success' => 'post has been deleted successfully',
+        'delete-failure' => 'Post could not be deleted',
+        'next' => 'Next',
+        'thumbnail-image' => 'Thumbnail Image',
+    ],
+    'post_category' => [
+        'category' => 'Category',
+        'categories' => 'Categories',
+        'add-category' => 'Add Category',
+        'edit-category' => 'Edit Category',
+        'save-category' => 'Save Category',
+        'name' => 'Name',
+    ],
+    'tag' => [
+        'tag' => 'Tag',
+        'tags' => 'Tags',
+        'add-tag' => 'Add Tag',
+        'edit-tag' => 'Edit Tag',
+        'save-tag' => 'Save Tag',
+        'name' => 'Name',
+    ]
+];

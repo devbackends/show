@@ -1,0 +1,43 @@
+{
+    "html": [
+        "[block slug=\"footer\" id=\"IDKLR383KTIQ8P43\"]"
+    ],
+    "components": [
+        [
+            {
+                "tagName": "phpb-block",
+                "content": "",
+                "attributes": {
+                    "slug": "footer",
+                    "id": "IDKLR383KTIQ8P43"
+                }
+            }
+        ]
+    ],
+    "css": "* { box-sizing: border-box; } body {margin: 0;}",
+    "style": [],
+    "blocks": {
+        "en": {
+            "IDKLR383KTTVI742": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKLR370EHQY06P5"
+                    }
+                },
+                "blocks": [],
+                "html": "",
+                "is_html": false
+            },
+            "IDKLR383KTIQ8P43": {
+                "settings": {
+                    "attributes": {
+                        "style-identifier": "IDKLR36Q9P3EL8H1"
+                    }
+                },
+                "blocks": [],
+                "html": "<div class=\"IDKLR36Q9P3EL8H1\">\n    <!-- FOOTER -->\n    <div class=\"footer IDKLR36Q9SYDIBC2\">\n        <div class=\"container\">\n            <div class=\"footer__top\">\n                <div class=\"row\">\n                    <div class=\"col-12 col-md-3\">\n                        <h3 data-raw-content=\"true\">Helpful links<\/h3>\n                        <ul data-raw-content=\"true\" class=\"list-unstyled\">\n                            <li><a data-cke-saved-href=\"\/page\/faq\" href=\"\/page\/faq\">FAQ<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/page\/terms-of-service\" href=\"\/page\/terms-of-service\">Terms of Service<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/marketplace\/contact-us\" href=\"\/marketplace\/contact-us\">Contact Us<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/page\/about-us\" href=\"\/page\/about-us\">About Us<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/page\/refund-policy\" href=\"\/page\/refund-policy\">Refund Policy<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/page\/privacy-policy\" href=\"\/page\/privacy-policy\">Privacy Policy<\/a><\/li>\n                            <li><a data-cke-saved-href=\"\/page\/shipping-policy\" href=\"\/page\/shipping-policy\">Shipping Policy<\/a><\/li>\n                        <\/ul>\n                    <\/div>\n                    <div class=\"col-12 col-md-3\">\n                        <h3 data-raw-content=\"true\">Our Network<\/h3>\n                        <ul data-raw-content=\"true\" class=\"list-unstyled\">\n                            <li><a data-cke-saved-href=\"{{route('marketplace.start-selling')}}\" href=\"{{route('marketplace.start-selling')}}\">Start Selling on 2A Gunshow<\/a><\/li>\n                            <li><a data-cke-saved-href=\"{{route('marketplace.community')}}\" href=\"{{route('marketplace.community')}}\">Shop The Community<\/a><\/li>\n                            <li><a data-cke-saved-href=\"{{route('marketplace.shows.index')}}\" href=\"{{route('marketplace.shows.index')}}\">Find Gunshows Near You<\/a><\/li>\n                            <li><a data-cke-saved-href=\"{{ route('ffl.onboarding.landing') }}\" href=\"{{ route('ffl.onboarding.landing') }}\">Become a Preferred FFL<\/a><\/li>\n                        <\/ul>\n                    <\/div>\n                    <div class=\"col-12 col-md-3 offset-md-3 text-left text-md-right\">\n                        <div phpb-blocks-container=\"\">[block slug=\"footer-icons\" id=\"IDKLR383KTTVI742\"]<\/div>\n                    <\/div>\n                <\/div>\n            <\/div>\n            <div class=\"footer__bottom\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 text-center text-md-left\"><a href=\"#\" class=\"brand-logo brand-logo--white IDKLR36QA1V2BCY3\"><\/a><\/div>\n                    <div class=\"col-md-6 text-center text-md-right\">\n                        <p data-raw-content=\"true\">\u00a92020 2AGunShow.com. All Rights Reserved<\/p>\n                    <\/div>\n                <\/div>\n            <\/div>\n        <\/div>\n    <\/div><!-- END FOOTER -->\n<\/div>",
+                "is_html": true
+            }
+        }
+    }
+}

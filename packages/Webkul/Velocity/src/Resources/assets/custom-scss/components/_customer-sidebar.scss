@@ -1,0 +1,55 @@
+.customer-sidemenu {
+    border-right: 1px solid $gray-light;
+    width: 280px;
+    &__content {
+        padding-top: 40px;
+        .customer-name {
+            margin-bottom: 15px;
+        }
+    }
+    &__details {
+        &-name {
+            text-align: center;
+            @extend %paragraph-bold;
+            margin-bottom: 0;
+        }
+        &-email {
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }
+    &__navigation {
+        width: 100%;
+        &-item {
+            &-icon {
+                width: 25px;
+                margin-top: 4px;
+            }
+            a {
+                padding: 10px 15px;
+                display: block;
+                display: flex;
+                .fa-chevron-right {
+                    font-size: $font-sm;
+                    margin-top: 5px;
+                }
+            }
+            &.active {
+                a {
+                    background: $black;
+                    i,
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__subtitle {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        @extend %paragraph-bold;
+        text-transform: uppercase;
+        padding: 0 15px;
+    }
+}

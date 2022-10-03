@@ -1,0 +1,91 @@
+warning: LF will be replaced by CRLF in packages/Webkul/Marketplace/src/Resources/views/shop/market/sellers/account/catalog/products/accordians/variations.blade.php.
+The file will have its original line endings in your working directory
+[1mdiff --git a/packages/Webkul/Marketplace/src/Resources/views/shop/market/sellers/account/catalog/products/accordians/variations.blade.php b/packages/Webkul/Marketplace/src/Resources/views/shop/market/sellers/account/catalog/products/accordians/variations.blade.php[m
+[1mindex 2a1ffecbb..09b741992 100644[m
+[1m--- a/packages/Webkul/Marketplace/src/Resources/views/shop/market/sellers/account/catalog/products/accordians/variations.blade.php[m
+[1m+++ b/packages/Webkul/Marketplace/src/Resources/views/shop/market/sellers/account/catalog/products/accordians/variations.blade.php[m
+[36m@@ -163,7 +163,7 @@[m
+                         </div>[m
+                         <div class="row">[m
+                             <div class="col mb-3">[m
+[31m-                                <image-uploader></image-uploader>[m
+[32m+[m[32m                                <image-uploader :name="`variants[${editableVariantIndex}][images][]`" :variantindex="editableVariantIndex" :images="variants[editableVariantIndex].images"></image-uploader>[m
+                             </div>[m
+                         </div>[m
+                         <div class="row">[m
+[36m@@ -343,7 +343,8 @@[m
+                 inventorySources: @json($inventorySources),[m
+                 inventories: {},[m
+                 totalQty: 0,[m
+[31m-                loadingVariant:false[m
+[32m+[m[32m                loadingVariant:false,[m
+[32m+[m[32m                editableVariantIndex: null[m
+             }),[m
+             watch: {[m
+ [m
+[36m@@ -364,13 +365,27 @@[m
+             },[m
+             async mounted() {[m
+                 await this.fetchVariants();[m
+[31m-                for(let i=0;i< this.configurableAttributes.length; i++){[m
+[31m-                    this.configurableAttributes[i].text=this.configurableAttributes[i].admin_name;[m
+[31m-                    for(let j=0;j < this.configurableAttributes[i].options.length;j++){[m
+[31m-                        this.configurableAttributes[i].options[j].text= this.configurableAttributes[i].options[j].admin_name;[m
+[32m+[m[32m                for (let i = 0; i < this.configurableAttributes.length; i++) {[m
+[32m+[m[32m                    this.configurableAttributes[i].text = this.configurableAttributes[i].admin_name;[m
+[32m+[m[32m                    for (let j = 0; j < this.configurableAttributes[i].options.length; j++) {[m
+[32m+[m[32m                        this.configurableAttributes[i].options[j].text = this.configurableAttributes[i].options[j].admin_name;[m
+                     }[m
+                 }[m
+[31m-                },[m
+[32m+[m[32m                this.$root.$on('changeVariantImages', ({files, variantindex}) => {[m
+[32m+[m[32m                    this.variants[variantindex].to_upload_images=[];[m
+[32m+[m[32m                    var form = $('#productCreationForm')[0]; // You need to use standard javascript object here[m
+[32m+[m[32m                    var formData = new FormData(form);[m
+[32m+[m[32m                    ([...files]).forEach((f,x) => {[m
+[32m+[m[32m                        //formData.append('file'+(x+1), f);[m
+[32m+[m[32m                        let field = $("<input></input>")[m
+[32m+[m[32m                        field.attr("type", "hidden")[m
+[32m+[m[32m                        field.attr("name", 'file'+(x+1))[m
+[32m+[m[32m                        field.attr("value", JSON.stringify(f));[m
+[32m+[m[32m                        $('#productCreationForm').append(field);[m
+[32m+[m[32m                        this.variants[variantindex].to_upload_images.push(f);[m
+[32m+[m[32m                    });[m
+[32m+[m[32m                });[m
+[32m+[m[32m            },[m
+             computed: {[m
+                    noOfAvailableVariants(){[m
+ [m
+[36m@@ -451,7 +466,7 @@[m
+                     this.variants.splice(index, 1)[m
+                 },[m
+                 removeEditableVariant: function(){[m
+[31m-                    let index=$('#editable-variant-index').val();[m
+[32m+[m[32m                    let index=this.editableVariantIndex;[m
+                     this.variants.splice(index, 1);[m
+                     this.showEditVariantForm=false;[m
+                 },[m
+[36m@@ -494,10 +509,10 @@[m
+                     this.$validator.validateAll(formScope).then((result) => {[m
+                         if (result) {[m
+                        /* console.log('validated');*/[m
+[31m-                            this.variants[$('#editable-variant-index').val()].price=this.editableVariant.price;[m
+[31m-                            this.variants[$('#editable-variant-index').val()].name=this.editableVariant.name;[m
+[31m-                            this.variants[$('#editable-variant-index').val()].sku=this.editableVariant.sku;[m
+[31m-                            this.variants[$('#editable-variant-index').val()].inventories=this.editableVariant.inventories;[m
+[32m+[m[32m                            this.variants[this.editableVariantIndex].price=this.editableVariant.price;[m
+[32m+[m[32m                            this.variants[this.editableVariantIndex].name=this.editableVariant.name;[m
+[32m+[m[32m                            this.variants[this.editableVariantIndex].sku=this.editableVariant.sku;[m
+[32m+[m[32m                            this.variants[this.editableVariantIndex].inventories=this.editableVariant.inventories;[m
+                             this.resetEditForm();[m
+                             this.showEditVariantForm=false;[m
+                         }[m
+[36m@@ -507,7 +522,7 @@[m
+                     this.setDynamicPropertiesForEditObject();[m
+                     this.showEditVariantForm=true;[m
+ [m
+[31m-                    $('#editable-variant-index').val(index);[m
+[32m+[m[32m                    this.editableVariantIndex=index;[m
+                     for (var property in this.editableVariant) {[m
+                         if (this.editableVariant.hasOwnProperty(property)) {[m
+                             if(property=='price'){[m

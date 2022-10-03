@@ -1,0 +1,25 @@
+{
+  "name": "mega/smsnotificationss",
+  "description": "SMS Notifications Extension",
+  "authors": [
+    {
+      "name": "Sam Parker",
+      "email": "samparker801@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+
+  "autoload": {
+    "psr-4": {
+      "Mega\\SmsNotifications\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mega\\SmsNotifications\\Providers\\SmsNotificationsServiceProvider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import url("https://use.typekit.net/wsj6owo.css");
+
+html,
+body {
+    height: 100%;
+}
+
+$objektive: "objektiv-mk1", sans-serif;
+$objektive-regular: 400;
+$objektive-medium: 500;
+$objektive-bold: 700;
+$objektive-extrabold: 800;
+$objektive-black: 900;
+$poster: "poster-gothic-atf", sans-serif;
+$poster-light: 300;
+$poster-regular: 400;
+$poster-medium: 500;
+$poster-bold: 600;
+$poster-heavy: 700;
+
+$font-xxl: 48px;
+$font-xl: 36px;
+$font-lg: 24px;
+$font-md: 16px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $poster;
+    font-weight: $poster-medium;
+}
+
+h1, .h1 {
+    font-size: $font-xxl;
+}
+
+h2, .h2 {
+    font-size: $font-xl;
+}
+h3, .h3 {
+    font-size: $font-lg;
+}
+h4, .h4 {
+    font-size: $font-md;
+}
+
+%paragraph {
+    font-family: $objektive;
+}
+
+.paragraph-lg {
+    @extend %paragraph;
+    font-size: $font-lg;
+}
+
+.paragraph-lg-bold {
+    @extend %paragraph;
+    font-size: $font-lg;
+    font-weight: $objektive-bold;
+}
+
+.paragraph-xl {
+    @extend %paragraph;
+    font-size: $font-xl;
+}
+
+.paragraph-xl-bold {
+    @extend %paragraph;
+    font-size: $font-xl;
+    font-weight: $objektive-bold;
+}
+
+.paragraph-xxl {
+    @extend %paragraph;
+    font-size: $font-xxl;
+}
+
+.paragraph-xxl-bold {
+    @extend %paragraph;
+    font-size: $font-xxl;
+    font-weight: $objektive-bold;
+}

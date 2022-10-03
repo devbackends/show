@@ -1,0 +1,24 @@
+// Scss utilities
+@import "../../../packages/Webkul/Marketplace/src/Resources/assets/scss/helpers/variables";
+
+// Default theme variables
+@import "../../../packages/Webkul/Marketplace/src/Resources/assets/scss/helpers/mixins";
+
+// Scss utilities
+@import "variables-bootstrap";
+
+// vendors
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/grid";
+
+@import "../../../packages/Webkul/Marketplace/src/Resources/assets/scss/base/typography";
+
+// Scss utilities
+@import "../../../packages/Webkul/Marketplace/src/Resources/assets/scss/helpers/helpers"; // helper classes (the old version of the theme file (moved from the public/css folder)
+@import "card";
+@import "pagination";
+@import "post-item";
+@import "front/view";
+@import "general";

@@ -1,0 +1,12 @@
+.order-shipping-label {
+    &__box {
+        border: 5px solid $color-black;
+        border-radius: 20px;
+    }
+    &__from {
+        border-bottom: 2px solid $color-black;
+    }
+    p {
+        color: $color-black;
+    }
+}

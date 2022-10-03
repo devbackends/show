@@ -1,0 +1,258 @@
+.control-group {
+    .control {
+        height: 38px;
+        font-size: $font-md;
+        color: #333333;
+        border: 1px solid $gray-light !important;
+        border-radius: 4px;
+        margin-top: 0;
+        &::placeholder {
+            color: $gray;
+            font-size: $font-md;
+        }
+    }
+    input {
+        &:checked {}
+    }
+}
+
+.table {
+    .massaction-remove {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+
+
+
+
+.control-group input:checked + .slider {
+    background-color: #ffe600
+}
+
+.control-group .custom_label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333
+}
+
+.control-group .full_width {
+    width: 100%
+}
+
+.control-group .no_margin {
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+.control-group .phone_number_field {
+    width: 75% !important;
+    float: left
+}
+
+.control-group .store-input {
+    max-width: 172px
+}
+
+.admin-customization .control-group div .bordered-button {
+    max-width: 80px;
+    margin-left: 0
+}
+
+.first-step-card-container .control-group {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.first-step-card-container .control-group .control {
+    width: 100%
+}
+
+
+
+
+.control-group-third {
+    float: left;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33.33%
+}
+
+.control-group-two-third {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 66.66%
+}
+
+
+
+
+@media (max-width: 1199px) {
+    .admin-customization .control-group div .bordered-button {
+        margin-left: 50px
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-customization .control-group div .bordered-button {
+        margin-left: 0px;
+        max-width: 100%
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .control-group .phone_number_field {
+        float: none;
+        width: 100% !important
+    }
+
+
+    .control-group-third {
+        float: none;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+
+    .first-step-card-container .control-group {
+        margin-bottom: 0px
+    }
+}
+
+
+.table .control-group {
+    min-width: 0
+}
+
+.admin-customization .control-group div .bordered-button {
+    max-width: 100%;
+    min-width:96px;
+}
+
+
+
+.control-group .image-wrapper {
+    margin-bottom: 0px
+}
+
+.control-group .image-wrapper .image-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    background: #EBEBEB;
+    background-position-x: center;
+    background-position-y: center;
+    position: relative
+}
+
+.control-group .image-wrapper .image-item .remove-image {
+    display: none;
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px 0 4px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-shadow: none;
+    background-color: #333333;
+    background-image: url("/images/custom-upload-image-delete.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    opacity: 0.7;
+    margin-right: 0
+}
+
+.control-group .image-wrapper .image-item .remove-image:hover {
+    opacity: 1
+}
+
+.control-group .image-wrapper .image-item:hover .remove-image {
+    display: block
+}
+
+.control-group .image-wrapper .image-item:hover .image-item-overlay, .control-group .image-wrapper .image-item.has-image:hover .image-item-overlay {
+    display: block;
+    opacity: 1
+}
+
+.control-group .image-wrapper .image-item .image-item-overlay {
+    display: block;
+    background-image: url("/images/custom-upload-image-choose.svg");
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.7;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.control-group .image-wrapper .image-item.has-image .image-item-overlay {
+    background-image: url("/images/custom-upload-image-change.svg");
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0
+}
+
+.content-container .content .page-header .control-group {
+    margin-left: 15px
+}
+
+.control-group.date:after, .control-group.datetime:after {
+    position: absolute;
+    right: 7px;
+    bottom: 6px;
+}
+
+.accordian {
+    .section-title {
+        font-weight: bold;
+    }
+}
+
+.slot-list {
+    .accordian {
+        .accordian-header {
+            padding: 1rem 0 !important;
+            .fa-chevron-circle-down {
+                display: none;
+            }
+            .fa-chevron-circle-right {
+                display: inline-block;
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+        &.active {
+            .accordian-header {
+                .fa-chevron-circle-right {
+                    display: none;
+                }
+                .fa-chevron-circle-down {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.published-field{
+    text-align: right;
+    label{
+        width: 100%;
+    }
+}
+

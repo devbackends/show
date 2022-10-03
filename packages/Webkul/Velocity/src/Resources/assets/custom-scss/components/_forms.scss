@@ -1,0 +1,118 @@
+select {
+    background-image: url("/images/select-arrow-down.svg");
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    padding-right: 20px !important;
+    -o-appearance: none !important;
+    -ms-appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: window !important;
+    appearance: none !important;
+
+    &::-ms-expand {
+        display: none !important;
+    }
+}
+
+.form-control {
+    border: 1px solid $gray-light;
+}
+
+
+/* .radio-button {
+    display: flex;
+    vertical-align: top;
+    position: relative;
+    margin-right: 15px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__input {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        input {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            &[type="radio"] + label {
+                border-radius: 100px !important;
+            }
+        }
+        input:checked + label {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background: $secondary;
+                border-radius: 50%;
+                top: 5px;
+                left: 5px;
+            }
+        }
+        label {
+            border: 1px solid $gray-dark;
+            background: $gray-lighter;
+            width: 24px;
+            height: 24px;
+            border-radius: 20%;
+            position: relative;
+            margin: 0;
+            pointer-events: none;
+        }
+    }
+    &__label {
+        display: inline-block;
+        vertical-align: top;
+        font-family: $paragraph;
+        font-size: $font-md;
+    }
+} */
+
+.radio-button {
+    &__input {
+        display: inline-block;
+    }
+    &__label {
+        display: inline-block;
+    }
+}
+
+input[type=checkbox] {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+}
+
+.checkbox-button {
+    .radio-button {
+        &__input {
+            display: inline-block;
+            input:checked + label {
+/*                 &::after {
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 900;
+                    content: "\f00c";
+                    position: absolute;
+                    color: $secondary;
+                    width: 0;
+                    height: 0;
+                    border-radius: 0;
+                    top: 0px;
+                    left: 4px;
+                } */
+            }
+            label {
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+/* .lalala {
+    color: red;
+} */

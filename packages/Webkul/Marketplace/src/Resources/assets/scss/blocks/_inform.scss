@@ -1,0 +1,14 @@
+// inform section
+.inform-section {
+  background-color: $color-gray-lighter;
+  // height: 350px;
+
+/*   @media only screen and (min-width: 992px) {
+    height: 539px;
+  } */
+
+  // head
+  &__head {
+    margin-top: -37px !important;
+  }
+}

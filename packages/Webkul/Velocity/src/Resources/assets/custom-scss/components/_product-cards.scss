@@ -1,0 +1,195 @@
+.product-card-new {
+    margin: 0 !important;
+}
+
+.product-card {
+    border: 1px solid $gray-lighter !important;
+    border-radius: 4px;
+}
+
+.VueCarousel-inner {
+    padding-bottom: 10px;
+}
+
+/*start wishlist page*/
+.product-card-new.custom-products-list {
+    margin: 0 32px 10px 0px;
+}
+.row.wishlist-container {
+    padding-top: 30px;
+}
+.account-content .account-layout .account-items-list.wishlist-container .product-card-new {
+    width: 21.5rem;
+    border: 1px solid #dddddd !important;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.new-product-flag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.8;
+    background: #333333;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-family: "PosterGothicATF";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+.new-product-flag-r {
+    opacity: 0.8;
+    background: #333333;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-family: "PosterGothicATF";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+/*end wishlist page*/
+
+/*start home page*/
+.product-card-new .card-body .wishlist-icon {
+    right: 40px;
+}
+.product-card-new .card-body .compare-icon,
+.product-card-new .card-body .wishlist-icon {
+    width: 30px;
+    height: 30px;
+    background: #333333;
+    opacity: 0.8;
+    border-radius: 50%;
+    text-align: center !important;
+}
+.product-card-new .card-body .compare-icon i,
+.product-card-new .card-body .wishlist-icon i {
+    font-size: 18px;
+    display: block;
+    margin-top: 6px;
+    color: white;
+}
+
+
+/* .VueCarousel .VueCarousel-slide:nth-of-type(1) .product-card-new {
+    margin-left: 0px;
+} */
+
+.VueCarousel .VueCarousel-slide {
+    min-width: 0 !important;
+}
+.VueCarousel .VueCarousel-wrapper .VueCarousel-inner {
+    margin-left: -5px;
+}
+
+.small-card-container {
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+/* .full-content-wrapper > .container-fluid > .row.ltr {
+    padding: 0px 0px !important;
+} */
+.full-content-wrapper > .container-fluid > .row.ltr .col-8 {
+    z-index: 1;
+}
+.small-card-container .card-body {
+    padding: 10px 10px !important;
+}
+.small-card-container .card-body .product-name {
+    margin-top: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+/*end home page*/
+
+.card {
+    &.product-card-new {
+        overflow: hidden;
+        border: 1px solid #dddddd !important;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 0 10px 20px 10px !important;
+    }
+    .product-image-container {
+        border-bottom: 1px solid $gray-light;
+        background: $gray-lighter;
+        overflow: hidden;
+        display: flex;
+        align-items: center; 
+        position: relative;
+        img {
+            width: inherit;
+            max-height: initial;
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
+    }
+    .product-image-container .quick-view-btn-container {
+        display: none !important;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        width: 150px;
+        margin-left: -75px;
+    }
+    &:hover {
+        .product-image-container .quick-view-btn-container {
+            display: inline-block !important;
+        }
+    }
+    &-body {
+        padding: 1rem;
+    }
+}
+
+.product-rating {
+    &__link {
+        font-size: $font-sm;
+        color: $gray-dark;
+        display: inline-block;
+        vertical-align: middle;
+        &:hover {
+            color: $gray-darker;
+        }
+    }
+}
+
+.product-price {
+    .special-price-content {
+        .sticker {
+            border-radius: 4px;
+            padding: 7px 10px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            top: 0;
+            left: 0;
+        }
+        .regular-price {
+            font-size: $font-sm !important;
+            color: $gray;
+            display: block;
+            line-height: initial;
+        }
+        .special-price {
+            font-family: $heading;
+            font-size: $font-lg !important;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+    }
+    .sticker {
+        position: relative;
+    }
+}
+

@@ -1,0 +1,82 @@
+.profile-info {
+    &__label {}
+    &__data {
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+.fluid-cards {
+    &__title {
+        @extend %font-paragraph-big-bold;
+    }
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        &-item {
+            padding: 1.5rem;
+            border: 1px solid $color-gray-light;
+            border-radius: 0.5rem;
+            margin-bottom: 30px;
+            p {
+                margin-bottom: 0;
+            }
+            &-icon {
+                font-size: 2rem;
+                color: $color-gray-light;
+            }
+            &-delete, &-edit {
+                padding: 1rem;
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+                cursor: pointer;
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        &-info {
+            p {
+                margin-bottom: 0;
+            }
+            &-title {
+                font-weight: bold;
+            }
+        }
+    }
+}
+.store-settings {
+    &__popover {
+        text-align: center;
+        .btn {
+            margin-top: 1rem;
+        }
+        &-link {
+
+        }
+    }
+    &__payment {
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .custom-switch {
+            position: relative;
+            .store-settings__popover-link {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9;
+                cursor: default;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
